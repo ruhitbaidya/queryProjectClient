@@ -7,6 +7,7 @@ import Register from "../Register/Register";
 import Quires from "../Queries/Quires";
 import PrivateRouter from "../../PrivateRoute/PrivateRouter";
 import MyQueries from "../MyQueries/MyQueries";
+import AddQueryPage from "../AddQueryPage/AddQueryPage";
 
 const router = createBrowserRouter([
   {
@@ -33,9 +34,15 @@ const router = createBrowserRouter([
         </PrivateRouter>
       },
       {
-        path : "/myQueries",
-        element : <PrivateRouter>
+        path: "/myQueries",
+        element: <PrivateRouter>
           <MyQueries></MyQueries>
+        </PrivateRouter>
+      },
+      {
+        path: "/addQuery",
+        element: <PrivateRouter>
+          <AddQueryPage></AddQueryPage>
         </PrivateRouter>
       }
     ]
