@@ -1,0 +1,171 @@
+[
+    {
+      "productName": "Smartphone",
+      "productBrand": "Samsung",
+      "productImageURL": "https://example.com/samsung-phone.jpg",
+      "queryTitle": "Is there a better smartphone with similar features?",
+      "boycottingReasonDetails": "Unsatisfactory battery life",
+      "user": {
+        "email": "user1@example.com",
+        "name": "John Doe",
+        "image": "https://example.com/user1.jpg",
+        "dateTime": "2024-05-10T12:00:00Z",
+        "recommendationCount": 0
+      }
+    },
+    {
+      "productName": "Laptop",
+      "productBrand": "Dell",
+      "productImageURL": "https://example.com/dell-laptop.jpg",
+      "queryTitle": "Looking for a laptop with better performance",
+      "boycottingReasonDetails": "Frequent crashes and slow processing",
+      "user": {
+        "email": "user2@example.com",
+        "name": "Jane Smith",
+        "image": "https://example.com/user2.jpg",
+        "dateTime": "2024-05-09T15:30:00Z",
+        "recommendationCount": 0
+      }
+    },
+    {
+      "productName": "Headphones",
+      "productBrand": "Sony",
+      "productImageURL": "https://example.com/sony-headphones.jpg",
+      "queryTitle": "Seeking headphones with better sound quality",
+      "boycottingReasonDetails": "Poor sound isolation and uncomfortable fit",
+      "user": {
+        "email": "user3@example.com",
+        "name": "Alice Johnson",
+        "image": "https://example.com/user3.jpg",
+        "dateTime": "2024-05-08T10:45:00Z",
+        "recommendationCount": 0
+      }
+    },
+    {
+      "productName": "Smartwatch",
+      "productBrand": "Apple",
+      "productImageURL": "https://example.com/apple-watch.jpg",
+      "queryTitle": "Is there a smartwatch with longer battery life?",
+      "boycottingReasonDetails": "Battery drains quickly",
+      "user": {
+        "email": "user4@example.com",
+        "name": "Mark Wilson",
+        "image": "https://example.com/user4.jpg",
+        "dateTime": "2024-05-07T14:20:00Z",
+        "recommendationCount": 0
+      }
+    },
+    {
+      "productName": "Tablet",
+      "productBrand": "Amazon",
+      "productImageURL": "https://example.com/amazon-tablet.jpg",
+      "queryTitle": "Need a tablet with better screen resolution",
+      "boycottingReasonDetails": "Low-quality display",
+      "user": {
+        "email": "user5@example.com",
+        "name": "Emily Brown",
+        "image": "https://example.com/user5.jpg",
+        "dateTime": "2024-05-06T09:10:00Z",
+        "recommendationCount": 0
+      }
+    },
+    {
+      "productName": "Camera",
+      "productBrand": "Canon",
+      "productImageURL": "https://example.com/canon-camera.jpg",
+      "queryTitle": "Looking for a camera with better low-light performance",
+      "boycottingReasonDetails": "Poor image quality in low light",
+      "user": {
+        "email": "user6@example.com",
+        "name": "Michael Davis",
+        "image": "https://example.com/user6.jpg",
+        "dateTime": "2024-05-05T11:55:00Z",
+        "recommendationCount": 0
+      }
+    },
+    {
+      "productName": "Gaming Console",
+      "productBrand": "Microsoft",
+      "productImageURL": "https://example.com/xbox-console.jpg",
+      "queryTitle": "Need a gaming console with better graphics",
+      "boycottingReasonDetails": "Graphics quality not up to expectations",
+      "user": {
+        "email": "user7@example.com",
+        "name": "David Lee",
+        "image": "https://example.com/user7.jpg",
+        "dateTime": "2024-05-04T08:45:00Z",
+        "recommendationCount": 0
+      }
+    },
+    {
+      "productName": "Wireless Router",
+      "productBrand": "TP-Link",
+      "productImageURL": "https://example.com/tp-link-router.jpg",
+      "queryTitle": "Seeking a router with better Wi-Fi coverage",
+      "boycottingReasonDetails": "Weak signal strength in some areas of the house",
+      "user": {
+        "email": "user8@example.com",
+        "name": "Sophia Martinez",
+        "image": "https://example.com/user8.jpg",
+        "dateTime": "2024-05-03T13:25:00Z",
+        "recommendationCount": 0
+      }
+    },
+    {
+      "productName": "Vacuum Cleaner",
+      "productBrand": "Dyson",
+      "productImageURL": "https://example.com/dyson-vacuum.jpg",
+      "queryTitle": "Looking for a vacuum cleaner with better suction power",
+      "boycottingReasonDetails": "Ineffective suction on carpets",
+      "user": {
+        "email": "user9@example.com",
+        "name": "Oliver Taylor",
+        "image": "https://example.com/user9.jpg",
+        "dateTime": "2024-05-02T16:35:00Z",
+        "recommendationCount": 0
+      }
+    },
+    {
+      "productName": "Smart Thermostat",
+      "productBrand": "Nest",
+      "productImageURL": "https://example.com/nest-thermostat.jpg",
+      "queryTitle": "Need a smart thermostat with better energy-saving features",
+      "boycottingReasonDetails": "High electricity bills despite using a smart thermostat",
+      "user": {
+        "email": "user10@example.com",
+        "name": "Ava Moore",
+        "image": "https://example.com/user10.jpg",
+        "dateTime": "2024-05-01T17:40:00Z",
+        "recommendationCount": 0
+      }
+    },
+    {
+      "productName": "Bluetooth Speaker",
+      "productBrand": "JBL",
+      "productImageURL": "https://example.com/jbl-speaker.jpg",
+      "queryTitle": "Looking for a Bluetooth speaker with better sound quality",
+      "boycottingReasonDetails": "Distorted sound at high volumes",
+      "user": {
+        "email": "user11@example.com",
+        "name": "Noah Johnson",
+        "image": "https://example.com/user11.jpg",
+        "dateTime": "2024-04-30T19:15:00Z",
+        "recommendationCount": 0
+      }
+    },
+    {
+      "productName": "Coffee Maker",
+      "productBrand": "Keurig",
+      "productImageURL": "https://example.com/keurig-coffee-maker.jpg",
+      "queryTitle": "Need a coffee maker with better brewing options",
+      "boycottingReasonDetails": "Limited brewing settings",
+      "user": {
+        "email": "user12@example.com",
+        "name": "Emma Wilson",
+        "image": "https://example.com/user12.jpg",
+        "dateTime": "2024-04-29T20:20:00Z",
+        "recommendationCount": 0
+      }
+    }
+  ]
+  
