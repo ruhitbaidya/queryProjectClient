@@ -1,3 +1,6 @@
+import logo from "../../assets/logo.png"
+
+
 const Footer = () => {
   return (
     <>
@@ -9,7 +12,7 @@ const Footer = () => {
                 <a href="#">
                   <img
                     className="w-auto h-7"
-                    src="https://merakiui.com/images/full-logo.svg"
+                    src={logo}
                     alt=""
                   />
                 </a>

@@ -4,12 +4,18 @@ import logo from "../../assets/logo.png"
 import { AuthUserContext } from '../../AuthContext/AuthContext';
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
-    const { user } = useContext(AuthUserContext);
+    const { user, logouruser } = useContext(AuthUserContext);
     console.log(user)
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
 
+    const handelLogout = () => {
+        logouruser()
+            .then((result) => {
+                console.log(result)
+            })
+    }
 
 
     const navlink = <>
@@ -20,8 +26,7 @@ function Navbar() {
                 <NavLink to="/recommendationsForMe" className="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Recommendations
     For Me</NavLink>
                 <NavLink to="/myQueries" className="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">My Queries</NavLink>
-                <NavLink to="/myRecommendations" className="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Login</NavLink>
-                <NavLink to="/login" className="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"> My recommendations</NavLink>
+                <NavLink to="/myRecommendations" className="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"> My recommendations</NavLink>
             </> : <>
                     <NavLink to="/" className="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Home</NavLink>
                     <NavLink to="/queries" className="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Queries</NavLink>
@@ -65,23 +70,22 @@ function Navbar() {
                         <div className="flex items-center mt-4 lg:mt-0">
                             {
                                 user ? <>
-                                    <button className="hidden mx-4 text-gray-600 transition-colors duration-300 transform lg:block dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 focus:text-gray-700 dark:focus:text-gray-400 focus:outline-none" aria-label="show notifications">
+                                    <button onClick={handelLogout} className="hidden mx-4 text-gray-600 transition-colors duration-300 transform lg:block dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 focus:text-gray-700 dark:focus:text-gray-400 focus:outline-none" aria-label="show notifications">
                                         Logout
                                     </button>
-                                </> : <>
-                                <button className="hidden mx-4 text-gray-600 transition-colors duration-300 transform lg:block dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 focus:text-gray-700 dark:focus:text-gray-400 focus:outline-none" aria-label="show notifications">
-                                        <Link to="/login">Login</Link>
+                                    <button type="button" className="flex items-center focus:outline-none" aria-label="toggle profile dropdown">
+                                        <div className="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
+                                            <img  src={user.photoURL} className="object-cover w-full h-full" alt="avatar" />
+                                        </div>
+
+                                        <h3 className="mx-2 text-gray-700 dark:text-gray-200 lg:hidden">Khatab wedaa</h3>
                                     </button>
-                                </>
+                                </> : <>
+                                        <button className="hidden mx-4 text-gray-600 transition-colors duration-300 transform lg:block dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 focus:text-gray-700 dark:focus:text-gray-400 focus:outline-none" aria-label="show notifications">
+                                            <Link to="/login">Login</Link>
+                                        </button>
+                                    </>
                             }
-
-                            <button type="button" className="flex items-center focus:outline-none" aria-label="toggle profile dropdown">
-                                <div className="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
-                                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" className="object-cover w-full h-full" alt="avatar" />
-                                </div>
-
-                                <h3 className="mx-2 text-gray-700 dark:text-gray-200 lg:hidden">Khatab wedaa</h3>
-                            </button>
                         </div>
                     </div>
                 </div>

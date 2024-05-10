@@ -1,11 +1,27 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthUserContext } from "../../AuthContext/AuthContext";
 import { ToastContainer, toast } from 'react-toastify';
+import logo from "../../assets/logo.png"
 const Login = () => {
-  const {googlesignIn} = useContext(AuthUserContext)
-
+  const {googlesignIn, loginwithEmailPass} = useContext(AuthUserContext)
+  const location = useLocation();
+  const navigate = useNavigate()
+  console.log(location)
+  const handelLoginemailpass = (e)=>{
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+     loginwithEmailPass(email, password)
+     .then((result)=>{
+      toast.success("successfully Login");
+      navigate(location.state || "/")
+     })
+     .catch((err)=>{
+      toast.error(err.message.split(":")[1])
+     })
+  }
 
   const handelGooleSignIn = ()=>{
       googlesignIn()
@@ -29,7 +45,7 @@ const Login = () => {
             <div className="lg:w-1/2">
               <img
                 className="w-auto h-7 sm:h-8"
-                src="https://merakiui.com/images/logo.svg"
+                src={logo}
                 alt=""
               />
               <h1 className="mt-4 text-gray-600 dark:text-gray-300 md:text-lg">
@@ -40,9 +56,10 @@ const Login = () => {
               </h1>
             </div>
             <div className="mt-8 lg:w-1/2 lg:mt-0">
-              <form className="w-full lg:max-w-xl">
+              <form className="w-full lg:max-w-xl" onSubmit={handelLoginemailpass}>
                 <div className="relative flex items-center">
                   <input
+                  name="email"
                     type="email"
                     className="block w-full py-3 text-gray-700 bg-white border rounded-lg px-5 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
                     placeholder="Email address"
@@ -51,6 +68,7 @@ const Login = () => {
                 <div className="relative flex items-center mt-4">
                   
                   <input
+                  name="password"
                     type="password"
                     className="block w-full px-5 py-3 text-gray-700 bg-white border rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
                     placeholder="Password"
