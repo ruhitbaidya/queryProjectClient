@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthUserContext } from "../../AuthContext/AuthContext";
+import { ToastContainer, toast } from 'react-toastify';
 const Login = () => {
   const {googlesignIn} = useContext(AuthUserContext)
 
@@ -9,7 +10,11 @@ const Login = () => {
   const handelGooleSignIn = ()=>{
       googlesignIn()
       .then((result)=>{
-        
+        toast.success("successfully Login")
+      })
+      .catch((err)=>{
+        const data = err.message.split(":")[1];
+        toast.error(data)
       })
   }
 
@@ -19,6 +24,7 @@ const Login = () => {
     <>
       <section className="bg-white dark:bg-gray-900">
         <div className="container px-6 py-24 mx-auto lg:py-32">
+        <ToastContainer />
           <div className="lg:flex">
             <div className="lg:w-1/2">
               <img
