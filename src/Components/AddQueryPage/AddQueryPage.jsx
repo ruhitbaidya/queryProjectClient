@@ -17,7 +17,7 @@ const AddQueryPage = () => {
         const infos = {productName, productBrand, productImageurl, queryTItle, boycottingDetails, userinfotime}
         console.log(infos)
 
-        axios.post("http://localhost:5000/createProduct", infos)
+        axios.post("http://localhost:5000/createProduct", infos,{withCredentials : true})
         .then((res)=> {
             if(res.data.insertedId){
                 toast.success("successfully Create Product")
