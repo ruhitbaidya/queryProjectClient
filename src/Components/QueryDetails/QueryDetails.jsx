@@ -7,8 +7,8 @@ import { AuthUserContext } from "../../AuthContext/AuthContext";
 
 const QueryDetails = () => {
   const [comment, setComment] = useState([]);
- 
   const { data } = useLoaderData();
+  const [counts, setCounts] = useState(data?.userinfotime?.recommendationCount);
   const {user} = useContext(AuthUserContext)
   const handelAddSubmit = (e)=>{
     e.preventDefault();
@@ -34,7 +34,8 @@ const QueryDetails = () => {
         if(res.data.insertedId){
             toast.success("successfully Create Product")
             form.reset();
-            data.userinfotime.recommendationCount = data.userinfotime.recommendationCount+ 1
+            setComment([...comment, infos])
+            setCounts(counts + 1)
         }
     })
 }
@@ -42,10 +43,10 @@ const QueryDetails = () => {
 useEffect(()=>{
     axios.get( `http://localhost:5000/allcomment/${data._id}`, {withCredentials : true})
     .then((res)=>{
-      console.log(res)
+      setComment(res.data)
     })
 }, [data._id])
-console.log(typeof data.userinfotime.recommendationCount)
+console.log(counts)
   return (
     <div className="my-[50px]">
       <div className="container mx-auto px-[20px]">
@@ -80,7 +81,7 @@ console.log(typeof data.userinfotime.recommendationCount)
                 <p className="text-gray-700 ">
                   Recommendation Count:{" "}
                   <span className="font-semibold">
-                    {data.userinfotime.recommendationCount}
+                    {counts}
                   </span>
                 </p>
               </div>
@@ -145,6 +146,27 @@ console.log(typeof data.userinfotime.recommendationCount)
                     </form>
                 </div>
             </div>
+        </div>
+        <div className="container mx-auto px-[20px] my-[50px]">
+          
+          {
+            comment.length !== 0 ?   comment.map((item)=>{
+              return <div key={item._id} className="flex gap-[30px] items-center mt-[10px] p-[20px] bg-gray-300">
+              <div>
+                <img className="w-[200px] h-[200px]" src={item?.reproductImageurl} alt="" />
+              </div>
+              <div>
+                <h2 className="text-[25px] font-[600]">{item.requeryTItle}</h2>
+                <p>{item.reboycottingDetails}</p>
+                <p>{item.reName}</p>
+                <p>{item.currentTime}</p>
+              </div>
+            </div>
+            }) : <>
+            <p className="text-3xl text-center font-[600] text-gray-400">No Recommendation In This Query</p>
+        </>
+          }
+          
         </div>
     </div>
   );
