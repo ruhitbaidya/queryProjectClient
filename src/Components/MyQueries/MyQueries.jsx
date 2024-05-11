@@ -66,9 +66,10 @@ const MyQueries = () => {
       </div>
 
       <div className="container mx-auto px-[20px] my-[50px]">
-        <div className="grid grid-cols-3 gap-[25px]">
+        
             {
-              myData ? <>
+              myData.length !== 0 ? <>
+              <div className="grid grid-cols-3 gap-[25px]">
               {
                 myData.map((item)=>{
                   return <div key={item._id} className="rounded shadow-lg">
@@ -102,11 +103,12 @@ const MyQueries = () => {
                 </div> 
                 })
               }
+               </div>
               </> : <>
-                <h3 className="text-gray-400 text-3xl">You Have No Product Add Click Top Up button Then You Can Add Your Product</h3>
+                <h3 className="text-gray-400 text-3xl text-center my-[50px]">You Have No Product Add Click Top Up button Then You Can Add Your Product</h3>
               </>
             }
-        </div>
+       
       </div>
     </div>
   )

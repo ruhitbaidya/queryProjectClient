@@ -12,6 +12,8 @@ import AllQuery from "../AllQuery/AllQuery";
 import QueryDetails from "../QueryDetails/QueryDetails";
 import axios from "axios";
 import UpdateQuery from "../UpdateQuery/UpdateQuery";
+import MyRecommindations from "../MyRecommendations/MyRecommindations";
+import Recommendations from "../Recommendations/Recommendations";
 
 const router = createBrowserRouter([
   {
@@ -62,6 +64,14 @@ const router = createBrowserRouter([
         path : "/queryUpdate/:id",
         loader : ({params})=> axios.get(`http://localhost:5000/findData/${params.id}`, {withCredentials : true}) ,
         element : <UpdateQuery></UpdateQuery>
+      },
+      {
+        path : "/myRecommendations",
+        element : <MyRecommindations></MyRecommindations>
+      },
+      {
+        path : "/recommendationsForMe",
+        element : <Recommendations></Recommendations>
       }
     ]
   }
