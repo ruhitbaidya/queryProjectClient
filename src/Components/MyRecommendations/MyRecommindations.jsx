@@ -4,9 +4,9 @@ import axios from "axios";
 import Swal from "sweetalert2";
 
 const MyRecommindations = () => {
-  const [mycomment, setMycomment] = useState([]);
   const { user } = useContext(AuthUserContext);
-  console.log(user?.email);
+  const [mycomment, setMycomment] = useState([]);
+  console.log(user.email);
   useEffect(() => {
     axios
       .get(`http://localhost:5000/mycomment/${user?.email}`, {
@@ -45,6 +45,9 @@ const MyRecommindations = () => {
       }
     });
   };
+ if( mycomment.length === 0){
+  return <p className="text-4xl text-center mt-[80px] text-gray-400">Not Found Any Data</p>
+ }
   return (
     <div className="container mx-auto px-[20px] my-[50px]">
       <div className="overflow-x-auto">

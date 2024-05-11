@@ -23,58 +23,86 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home></Home>,
       },
       {
         path: "/login",
-        element: <Login></Login>
+        element: <Login></Login>,
       },
       {
         path: "/register",
-        element: <Register></Register>
+        element: <Register></Register>,
       },
       {
         path: "/queries",
-        element: <PrivateRouter>
-          <Quires></Quires>
-        </PrivateRouter>
+        element: (
+          <PrivateRouter>
+            <Quires></Quires>
+          </PrivateRouter>
+        ),
       },
       {
         path: "/myQueries",
-        element: <PrivateRouter>
-          <MyQueries></MyQueries>
-        </PrivateRouter>
+        element: (
+          <PrivateRouter>
+            <MyQueries></MyQueries>
+          </PrivateRouter>
+        ),
       },
       {
         path: "/addQuery",
-        element: <PrivateRouter>
-          <AddQueryPage></AddQueryPage>
-        </PrivateRouter>
+        element: (
+          <PrivateRouter>
+            <AddQueryPage></AddQueryPage>
+          </PrivateRouter>
+        ),
       },
       {
-        path : "/allQuery",
-        element : <AllQuery></AllQuery>
+        path: "/allQuery",
+        element: <AllQuery></AllQuery>,
       },
       {
-        path : "/queryDetails/:id",
-        loader : ({params})=> axios.get(`http://localhost:5000/findData/${params.id}`,{withCredentials : true}) ,
-        element : <QueryDetails></QueryDetails>
+        path: "/queryDetails/:id",
+        loader: ({ params }) =>
+          axios.get(`http://localhost:5000/findData/${params.id}`, {
+            withCredentials: true,
+          }),
+        element: (
+          <PrivateRouter>
+            <QueryDetails></QueryDetails>
+          </PrivateRouter>
+        ),
       },
       {
-        path : "/queryUpdate/:id",
-        loader : ({params})=> axios.get(`http://localhost:5000/findData/${params.id}`, {withCredentials : true}) ,
-        element : <UpdateQuery></UpdateQuery>
+        path: "/queryUpdate/:id",
+        loader: ({ params }) =>
+          axios.get(`http://localhost:5000/findData/${params.id}`, {
+            withCredentials: true,
+          }),
+        element: (
+          <PrivateRouter>
+            <UpdateQuery></UpdateQuery>
+          </PrivateRouter>
+        ),
       },
       {
-        path : "/myRecommendations",
-        element : <MyRecommindations></MyRecommindations>
+        path: "/myRecommendations",
+        element: (
+          <PrivateRouter>
+            <MyRecommindations></MyRecommindations>
+          </PrivateRouter>
+        ),
       },
       {
-        path : "/recommendationsForMe",
-        element : <Recommendations></Recommendations>
-      }
-    ]
-  }
-])
+        path: "/recommendationsForMe",
+        element: (
+          <PrivateRouter>
+            <Recommendations></Recommendations>
+          </PrivateRouter>
+        ),
+      },
+    ],
+  },
+]);
 
 export default router;
