@@ -2,7 +2,7 @@
     {
       "productName": "Smartphone",
       "productBrand": "Samsung",
-      "productImageURL": "https://example.com/samsung-phone.jpg",
+      "productImageURL": "https://i.ibb.co/nm8F4g7/mobile-Samsung.jpg",
       "queryTitle": "Is there a better smartphone with similar features?",
       "boycottingReasonDetails": "Unsatisfactory battery life",
       "user": {
@@ -16,7 +16,7 @@
     {
       "productName": "Laptop",
       "productBrand": "Dell",
-      "productImageURL": "https://example.com/dell-laptop.jpg",
+      "productImageURL": "https://i.ibb.co/gyZjwdr/laptop.jpg",
       "queryTitle": "Looking for a laptop with better performance",
       "boycottingReasonDetails": "Frequent crashes and slow processing",
       "user": {
@@ -30,7 +30,7 @@
     {
       "productName": "Headphones",
       "productBrand": "Sony",
-      "productImageURL": "https://example.com/sony-headphones.jpg",
+      "productImageURL": "https://i.ibb.co/whkyy7Z/headphone.jpg",
       "queryTitle": "Seeking headphones with better sound quality",
       "boycottingReasonDetails": "Poor sound isolation and uncomfortable fit",
       "user": {
@@ -44,7 +44,7 @@
     {
       "productName": "Smartwatch",
       "productBrand": "Apple",
-      "productImageURL": "https://example.com/apple-watch.jpg",
+      "productImageURL": "https://i.ibb.co/Xp5n78r/smartwatch.jpg",
       "queryTitle": "Is there a smartwatch with longer battery life?",
       "boycottingReasonDetails": "Battery drains quickly",
       "user": {
@@ -58,7 +58,7 @@
     {
       "productName": "Tablet",
       "productBrand": "Amazon",
-      "productImageURL": "https://example.com/amazon-tablet.jpg",
+      "productImageURL": "https://i.ibb.co/bL57vYT/tablet.jpg",
       "queryTitle": "Need a tablet with better screen resolution",
       "boycottingReasonDetails": "Low-quality display",
       "user": {
@@ -72,7 +72,7 @@
     {
       "productName": "Camera",
       "productBrand": "Canon",
-      "productImageURL": "https://example.com/canon-camera.jpg",
+      "productImageURL": "https://i.ibb.co/r3ntBbh/camera.jpg",
       "queryTitle": "Looking for a camera with better low-light performance",
       "boycottingReasonDetails": "Poor image quality in low light",
       "user": {
@@ -86,7 +86,7 @@
     {
       "productName": "Gaming Console",
       "productBrand": "Microsoft",
-      "productImageURL": "https://example.com/xbox-console.jpg",
+      "productImageURL": "https://i.ibb.co/6W7P1yJ/gameingconsole.jpg",
       "queryTitle": "Need a gaming console with better graphics",
       "boycottingReasonDetails": "Graphics quality not up to expectations",
       "user": {
@@ -100,7 +100,7 @@
     {
       "productName": "Wireless Router",
       "productBrand": "TP-Link",
-      "productImageURL": "https://example.com/tp-link-router.jpg",
+      "productImageURL": "https://i.ibb.co/ZMPSkPw/wherelessrouter.jpg",
       "queryTitle": "Seeking a router with better Wi-Fi coverage",
       "boycottingReasonDetails": "Weak signal strength in some areas of the house",
       "user": {
@@ -114,7 +114,7 @@
     {
       "productName": "Vacuum Cleaner",
       "productBrand": "Dyson",
-      "productImageURL": "https://example.com/dyson-vacuum.jpg",
+      "productImageURL": "https://i.ibb.co/b5zvWPW/vacrumclenar.jpg",
       "queryTitle": "Looking for a vacuum cleaner with better suction power",
       "boycottingReasonDetails": "Ineffective suction on carpets",
       "user": {
@@ -128,7 +128,7 @@
     {
       "productName": "Smart Thermostat",
       "productBrand": "Nest",
-      "productImageURL": "https://example.com/nest-thermostat.jpg",
+      "productImageURL": "https://i.ibb.co/YXdkCDy/reorys.jpg",
       "queryTitle": "Need a smart thermostat with better energy-saving features",
       "boycottingReasonDetails": "High electricity bills despite using a smart thermostat",
       "user": {
@@ -142,7 +142,7 @@
     {
       "productName": "Bluetooth Speaker",
       "productBrand": "JBL",
-      "productImageURL": "https://example.com/jbl-speaker.jpg",
+      "productImageURL": "https://i.ibb.co/tZN73pS/bloothspeaker.png",
       "queryTitle": "Looking for a Bluetooth speaker with better sound quality",
       "boycottingReasonDetails": "Distorted sound at high volumes",
       "user": {
@@ -156,7 +156,7 @@
     {
       "productName": "Coffee Maker",
       "productBrand": "Keurig",
-      "productImageURL": "https://example.com/keurig-coffee-maker.jpg",
+      "productImageURL": "https://i.ibb.co/Wn8tDXV/coffymaker.jpg",
       "queryTitle": "Need a coffee maker with better brewing options",
       "boycottingReasonDetails": "Limited brewing settings",
       "user": {

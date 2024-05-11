@@ -8,6 +8,7 @@ import Quires from "../Queries/Quires";
 import PrivateRouter from "../../PrivateRoute/PrivateRouter";
 import MyQueries from "../MyQueries/MyQueries";
 import AddQueryPage from "../AddQueryPage/AddQueryPage";
+import AllQuery from "../AllQuery/AllQuery";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
         element: <PrivateRouter>
           <AddQueryPage></AddQueryPage>
         </PrivateRouter>
+      },
+      {
+        path : "/allQuery",
+        element : <AllQuery></AllQuery>
       }
     ]
   }

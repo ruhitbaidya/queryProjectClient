@@ -4,7 +4,7 @@ import logo from "../../assets/logo.png";
 import {useNavigate} from "react-router-dom"
 import { ToastContainer, toast } from 'react-toastify';
 const Register = () => {
-  const { user, signUpEmailPassword, userUpdate } = useContext(AuthUserContext);
+  const {signUpEmailPassword, userUpdate } = useContext(AuthUserContext);
   const navigate = useNavigate()
   const handelSubmit = (e) => {
     e.preventDefault();
@@ -15,7 +15,7 @@ const Register = () => {
     const photo = form.photo.value;
     const infos = { displayName: name, photoURL:photo }
     signUpEmailPassword(email, password)
-    .then((result)=>{
+    .then(()=>{
       userUpdate(infos)
       .then((result)=>{
         console.log(result)

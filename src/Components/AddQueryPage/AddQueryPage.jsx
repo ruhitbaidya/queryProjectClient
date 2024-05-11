@@ -1,6 +1,25 @@
-
+import { useContext } from "react";
+import { AuthUserContext } from "../../AuthContext/AuthContext";
+import times from "../CurrentDateAndTime/DateAtime";
+import axios from "axios";
 
 const AddQueryPage = () => {
+    const {user} = useContext(AuthUserContext)
+    const handelAddSubmit = (e)=>{
+        e.preventDefault();
+        const form = e.target;
+        const productName = form.productName.value;
+        const productBrand = form.productBrand.value;
+        const productImageurl = form.productImageurl.value;
+        const queryTItle = form.queryTItle.value;
+        const boycottingDetails = form.boycottingDetails.value;
+        const userinfotime = {userEmail : user.email, cName : user.displayName, Uphoto : user.photoURL, recommendationCount : 0, currentTime : times}
+        const infos = {productName, productBrand, productImageurl, queryTItle, boycottingDetails, userinfotime}
+        console.log(infos)
+        
+        axios.post("http://localhost:5000/createProduct", infos)
+        .then((res)=> console.log(res))
+    }
     return (
         <div className="my-[50px]">
             <div className="container mx-auto px-[20px]">
@@ -8,7 +27,7 @@ const AddQueryPage = () => {
                     <h2 className="text-4xl font-[600] text-center">Add Query for Better Alternatives</h2>
                 </div>
                 <div className="mt-[60px]"> 
-                    <form>
+                    <form onSubmit={handelAddSubmit}>
                         <div className="grid lg:grid-cols-3 gap-[30px] mt-[20px]">
                             <div className="">
                                 <label htmlFor="">Product Name</label>
