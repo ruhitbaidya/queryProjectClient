@@ -31,20 +31,20 @@ const AllQuery = () => {
                 Alteration Reason: <span className="font-semibold">{item.boycottingDetails}</span>
               </p>
               <p className="text-gray-700 ">
-                Date Posted: <span className="font-semibold">{item.userinfotime.currentTime}</span>
+                Date Posted: <span className="font-semibold">{item?.userinfotime?.currentTime}</span>
               </p>
               <p className="text-gray-700 ">
                   Recommendation Count:{" "}
                   <span className="font-semibold">
-                    {item.userinfotime.recommendationCount}
+                    {item?.userinfotime?.recommendationCount}
                   </span>
                 </p>
             </div>
             <div className="px-6 py-4">
               <div className="flex items-center">
-                <img className="w-12 h-12 rounded-full mr-4" src={item.userinfotime.Uphoto} alt="User" />
+                <img className="w-12 h-12 rounded-full mr-4" src={item?.userinfotime?.Uphoto} alt="User" />
                 <div className="text-sm">
-                  <p className="text-gray-900 leading-none">{item.userinfotime.cName}</p>
+                  <p className="text-gray-900 leading-none">{item?.userinfotime?.cName}</p>
                 </div>
               </div>
             </div>

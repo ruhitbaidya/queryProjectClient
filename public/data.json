@@ -1,171 +1,50 @@
 [
-    {
-      "productName": "Smartphone",
-      "productBrand": "Samsung",
-      "productImageURL": "https://i.ibb.co/nm8F4g7/mobile-Samsung.jpg",
-      "queryTitle": "Is there a better smartphone with similar features?",
-      "boycottingReasonDetails": "Unsatisfactory battery life",
-      "user": {
-        "email": "user1@example.com",
-        "name": "John Doe",
-        "image": "https://example.com/user1.jpg",
-        "dateTime": "2024-05-10T12:00:00Z",
-        "recommendationCount": 0
-      }
-    },
-    {
-      "productName": "Laptop",
-      "productBrand": "Dell",
-      "productImageURL": "https://i.ibb.co/gyZjwdr/laptop.jpg",
-      "queryTitle": "Looking for a laptop with better performance",
-      "boycottingReasonDetails": "Frequent crashes and slow processing",
-      "user": {
-        "email": "user2@example.com",
-        "name": "Jane Smith",
-        "image": "https://example.com/user2.jpg",
-        "dateTime": "2024-05-09T15:30:00Z",
-        "recommendationCount": 0
-      }
-    },
-    {
-      "productName": "Headphones",
-      "productBrand": "Sony",
-      "productImageURL": "https://i.ibb.co/whkyy7Z/headphone.jpg",
-      "queryTitle": "Seeking headphones with better sound quality",
-      "boycottingReasonDetails": "Poor sound isolation and uncomfortable fit",
-      "user": {
-        "email": "user3@example.com",
-        "name": "Alice Johnson",
-        "image": "https://example.com/user3.jpg",
-        "dateTime": "2024-05-08T10:45:00Z",
-        "recommendationCount": 0
-      }
-    },
-    {
-      "productName": "Smartwatch",
-      "productBrand": "Apple",
-      "productImageURL": "https://i.ibb.co/Xp5n78r/smartwatch.jpg",
-      "queryTitle": "Is there a smartwatch with longer battery life?",
-      "boycottingReasonDetails": "Battery drains quickly",
-      "user": {
-        "email": "user4@example.com",
-        "name": "Mark Wilson",
-        "image": "https://example.com/user4.jpg",
-        "dateTime": "2024-05-07T14:20:00Z",
-        "recommendationCount": 0
-      }
-    },
-    {
-      "productName": "Tablet",
-      "productBrand": "Amazon",
-      "productImageURL": "https://i.ibb.co/bL57vYT/tablet.jpg",
-      "queryTitle": "Need a tablet with better screen resolution",
-      "boycottingReasonDetails": "Low-quality display",
-      "user": {
-        "email": "user5@example.com",
-        "name": "Emily Brown",
-        "image": "https://example.com/user5.jpg",
-        "dateTime": "2024-05-06T09:10:00Z",
-        "recommendationCount": 0
-      }
-    },
-    {
-      "productName": "Camera",
-      "productBrand": "Canon",
-      "productImageURL": "https://i.ibb.co/r3ntBbh/camera.jpg",
-      "queryTitle": "Looking for a camera with better low-light performance",
-      "boycottingReasonDetails": "Poor image quality in low light",
-      "user": {
-        "email": "user6@example.com",
-        "name": "Michael Davis",
-        "image": "https://example.com/user6.jpg",
-        "dateTime": "2024-05-05T11:55:00Z",
-        "recommendationCount": 0
-      }
-    },
-    {
-      "productName": "Gaming Console",
-      "productBrand": "Microsoft",
-      "productImageURL": "https://i.ibb.co/6W7P1yJ/gameingconsole.jpg",
-      "queryTitle": "Need a gaming console with better graphics",
-      "boycottingReasonDetails": "Graphics quality not up to expectations",
-      "user": {
-        "email": "user7@example.com",
-        "name": "David Lee",
-        "image": "https://example.com/user7.jpg",
-        "dateTime": "2024-05-04T08:45:00Z",
-        "recommendationCount": 0
-      }
-    },
-    {
-      "productName": "Wireless Router",
-      "productBrand": "TP-Link",
-      "productImageURL": "https://i.ibb.co/ZMPSkPw/wherelessrouter.jpg",
-      "queryTitle": "Seeking a router with better Wi-Fi coverage",
-      "boycottingReasonDetails": "Weak signal strength in some areas of the house",
-      "user": {
-        "email": "user8@example.com",
-        "name": "Sophia Martinez",
-        "image": "https://example.com/user8.jpg",
-        "dateTime": "2024-05-03T13:25:00Z",
-        "recommendationCount": 0
-      }
-    },
-    {
-      "productName": "Vacuum Cleaner",
-      "productBrand": "Dyson",
-      "productImageURL": "https://i.ibb.co/b5zvWPW/vacrumclenar.jpg",
-      "queryTitle": "Looking for a vacuum cleaner with better suction power",
-      "boycottingReasonDetails": "Ineffective suction on carpets",
-      "user": {
-        "email": "user9@example.com",
-        "name": "Oliver Taylor",
-        "image": "https://example.com/user9.jpg",
-        "dateTime": "2024-05-02T16:35:00Z",
-        "recommendationCount": 0
-      }
-    },
-    {
-      "productName": "Smart Thermostat",
-      "productBrand": "Nest",
-      "productImageURL": "https://i.ibb.co/YXdkCDy/reorys.jpg",
-      "queryTitle": "Need a smart thermostat with better energy-saving features",
-      "boycottingReasonDetails": "High electricity bills despite using a smart thermostat",
-      "user": {
-        "email": "user10@example.com",
-        "name": "Ava Moore",
-        "image": "https://example.com/user10.jpg",
-        "dateTime": "2024-05-01T17:40:00Z",
-        "recommendationCount": 0
-      }
-    },
-    {
-      "productName": "Bluetooth Speaker",
-      "productBrand": "JBL",
-      "productImageURL": "https://i.ibb.co/tZN73pS/bloothspeaker.png",
-      "queryTitle": "Looking for a Bluetooth speaker with better sound quality",
-      "boycottingReasonDetails": "Distorted sound at high volumes",
-      "user": {
-        "email": "user11@example.com",
-        "name": "Noah Johnson",
-        "image": "https://example.com/user11.jpg",
-        "dateTime": "2024-04-30T19:15:00Z",
-        "recommendationCount": 0
-      }
-    },
-    {
-      "productName": "Coffee Maker",
-      "productBrand": "Keurig",
-      "productImageURL": "https://i.ibb.co/Wn8tDXV/coffymaker.jpg",
-      "queryTitle": "Need a coffee maker with better brewing options",
-      "boycottingReasonDetails": "Limited brewing settings",
-      "user": {
-        "email": "user12@example.com",
-        "name": "Emma Wilson",
-        "image": "https://example.com/user12.jpg",
-        "dateTime": "2024-04-29T20:20:00Z",
-        "recommendationCount": 0
-      }
-    }
-  ]
-  
+  {
+      "recommendationTitle": "Best Backpack for Travelers",
+      "productName": "Explorer Pro 3000",
+      "productImage": "https://example.com/product_images/explorer_pro_3000.jpg",
+      "recommendationReason": "The Explorer Pro 3000 is durable, spacious, and designed with multiple compartments, making it perfect for travelers. Its ergonomic design ensures comfort during long journeys."
+  },
+  {
+      "recommendationTitle": "Top-rated Wireless Earbuds",
+      "productName": "SoundSync Air",
+      "productImage": "https://example.com/product_images/soundsync_air.jpg",
+      "recommendationReason": "SoundSync Air offers exceptional sound quality and a comfortable fit. With long battery life and a sleek design, they are perfect for listening to music on the go."
+  },
+  {
+      "recommendationTitle": "Ultimate Gaming Laptop",
+      "productName": "GamerPro X",
+      "productImage": "https://example.com/product_images/gamerpro_x.jpg",
+      "recommendationReason": "The GamerPro X is a powerhouse with high-performance specs and a stunning display. It delivers smooth gaming experiences and handles demanding tasks effortlessly."
+  },
+  {
+      "recommendationTitle": "Best Blender for Smoothies",
+      "productName": "BlendMaster 5000",
+      "productImage": "https://example.com/product_images/blendmaster_5000.jpg",
+      "recommendationReason": "The BlendMaster 5000 is a versatile blender that effortlessly blends fruits and vegetables into delicious smoothies. Its powerful motor and durable design make it a kitchen essential."
+  },
+  {
+      "recommendationTitle": "Premium Noise-Canceling Headphones",
+      "productName": "SilentZone Pro",
+      "productImage": "https://example.com/product_images/silentzone_pro.jpg",
+      "recommendationReason": "SilentZone Pro headphones offer superior noise cancellation and immersive sound quality. They are perfect for blocking out distractions and enjoying music or podcasts in peace."
+  },
+  {
+      "recommendationTitle": "Stylish Smartwatch for Fitness",
+      "productName": "FitTech Smartwatch",
+      "productImage": "https://example.com/product_images/fittech_smartwatch.jpg",
+      "recommendationReason": "The FitTech Smartwatch tracks fitness metrics accurately and boasts a sleek design. With its intuitive interface and long battery life, it's a great companion for fitness enthusiasts."
+  },
+  {
+      "recommendationTitle": "Compact Digital Camera",
+      "productName": "SnapShot Pro",
+      "productImage": "https://example.com/product_images/snapshot_pro.jpg",
+      "recommendationReason": "SnapShot Pro is a compact and lightweight camera with advanced features for capturing high-quality photos. Its portability and user-friendly interface make it ideal for photography enthusiasts."
+  },
+  {
+      "recommendationTitle": "Reliable External Hard Drive",
+      "productName": "DataVault Plus",
+      "productImage": "https://example.com/product_images/datavault_plus.jpg",
+      "recommendationReason": "DataVault Plus offers ample storage space and fast data transfer speeds. Whether for backup or storing multimedia files, it's a dependable choice for data storage needs."
+  }
+]
