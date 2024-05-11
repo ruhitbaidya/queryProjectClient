@@ -3,8 +3,8 @@ import bgimge from "../../assets/addpng.png"
 import "./style.css"
 import { Link } from "react-router-dom";
 import { AuthUserContext } from "../../AuthContext/AuthContext";
-import { toast, ToastContainer } from 'react-toastify';
 import axios from "axios";
+import Swal from 'sweetalert2'
 const MyQueries = () => {
   const [myData, setMyData] = useState([])
   const {user} = useContext(AuthUserContext);
@@ -17,12 +17,38 @@ const MyQueries = () => {
     })
   }, [email])
   const handelDelete = (id)=>{
-    toast.confirm(toast(id))
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios.delete(`http://localhost:5000/delete/${id}`)
+        .then((res)=>{
+          if(res.data.deletedCount > 0){
+
+            const finial = myData.filter((ids)=> ids._id !== id);
+            setMyData(finial)
+
+            Swal.fire({
+              title: "Deleted!",
+              text: "Your file has been deleted.",
+              icon: "success"
+            });
+          }
+        })
+        
+      }
+    });
   }
+  
   console.log(myData)
   return (
     <div className="my-[50px]">
-      <ToastContainer />
       <div className="findMoreImage ">
         <div className="container mx-auto px-[20px]">
           <div className="bg-colors-ne rounded-lg">
@@ -63,8 +89,14 @@ const MyQueries = () => {
                     </p>
                   </div>
                   <div className="px-6 py-4">
+                    <Link to={`/queryDetails/${item._id}`}>
                     <button className="w-full bg-green-400 py-[7px] rounded-lg text-white">View Details</button>
+                    </Link>
+                    
+                    <Link to={`/queryUpdate/${item._id}`}>
                     <button className="w-full bg-yellow-400 py-[7px] rounded-lg text-white mt-[10px]">Update</button>
+                    </Link>
+                    
                     <button onClick={()=> handelDelete(item._id)} className="w-full bg-red-500 py-[7px] rounded-lg text-white mt-[10px]">Delete</button>
                   </div>
                 </div> 

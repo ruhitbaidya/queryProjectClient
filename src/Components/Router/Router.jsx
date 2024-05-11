@@ -9,6 +9,9 @@ import PrivateRouter from "../../PrivateRoute/PrivateRouter";
 import MyQueries from "../MyQueries/MyQueries";
 import AddQueryPage from "../AddQueryPage/AddQueryPage";
 import AllQuery from "../AllQuery/AllQuery";
+import QueryDetails from "../QueryDetails/QueryDetails";
+import axios from "axios";
+import UpdateQuery from "../UpdateQuery/UpdateQuery";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +52,16 @@ const router = createBrowserRouter([
       {
         path : "/allQuery",
         element : <AllQuery></AllQuery>
+      },
+      {
+        path : "/queryDetails/:id",
+        loader : ({params})=> axios.get(`http://localhost:5000/findData/${params.id}`,{withCredentials : true}) ,
+        element : <QueryDetails></QueryDetails>
+      },
+      {
+        path : "/queryUpdate/:id",
+        loader : ({params})=> axios.get(`http://localhost:5000/findData/${params.id}`, {withCredentials : true}) ,
+        element : <UpdateQuery></UpdateQuery>
       }
     ]
   }
