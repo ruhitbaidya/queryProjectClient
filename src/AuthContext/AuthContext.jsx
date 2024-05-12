@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 import { GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile  } from "firebase/auth";
 import auth from "../firebase/firebase";
+import axios from "axios";
 
 export const AuthUserContext = createContext(null)
 const AuthContext = ({ children }) => {
@@ -28,6 +29,10 @@ const AuthContext = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (users) => {
       setUser(users);
       setLoading(false);
+      if(users){
+        axios.get(`http://localhost:5000/jwtTokenCreate/${users.email}`, {withCredentials : true})
+        .then((res)=> console.log(res.data))
+      }
     })
     return () => {
       unsubscribe();

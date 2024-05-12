@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { NavLink, Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { AuthUserContext } from "../../AuthContext/AuthContext";
+import axios from "axios";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { user, logouruser } = useContext(AuthUserContext);
@@ -11,6 +12,9 @@ function Navbar() {
   };
 
   const handelLogout = () => {
+    axios.post(`https://localhost:5000/logutUser/${user.email}`)
+    .then((res)=>console.log(res));
+
     logouruser().then((result) => {
       console.log(result);
     });

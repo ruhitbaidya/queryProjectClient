@@ -1,20 +1,22 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthUserContext } from "../../AuthContext/AuthContext";
 import { ToastContainer, toast } from 'react-toastify';
 import logo from "../../assets/logo.png"
+
 const Login = () => {
-  const {googlesignIn, loginwithEmailPass} = useContext(AuthUserContext)
+  const {user, googlesignIn, loginwithEmailPass} = useContext(AuthUserContext)
   const location = useLocation();
   const navigate = useNavigate()
-  console.log(location)
   const handelLoginemailpass = (e)=>{
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
      loginwithEmailPass(email, password)
      .then((result)=>{
+       const emails = result.user.email
+       console.log(emails)
       toast.success("successfully Login");
       navigate(location.state || "/")
      })

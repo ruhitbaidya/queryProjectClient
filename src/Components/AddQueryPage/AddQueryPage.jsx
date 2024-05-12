@@ -13,7 +13,7 @@ const AddQueryPage = () => {
         const productImageurl = form.productImageurl.value;
         const queryTItle = form.queryTItle.value;
         const boycottingDetails = form.boycottingDetails.value;
-        const createAt = Date.now()
+        const createAt = Date.now();
         const userinfotime = {userEmail : user.email, cName : user.displayName, Uphoto : user.photoURL, recommendationCount : 0, currentTime : DateAtime()}
         const infos = {productName, productBrand, productImageurl, queryTItle, boycottingDetails, userinfotime, createAt}
 

@@ -13,8 +13,8 @@ const AllQuery = () => {
     axios
       .get("http://localhost:5000/findProduct", { withCredentials: true })
       .then((res) => {
-        console.log(res.data);
-        setProduct(res.data);
+        const finddata = res.data.sort((a, b) => b.createAt - a.createAt);
+        setProduct(finddata);
       });
   }, []);
   const handelGridChange = (text)=>{
