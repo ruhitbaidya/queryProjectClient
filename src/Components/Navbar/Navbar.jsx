@@ -12,7 +12,7 @@ function Navbar() {
   };
 
   const handelLogout = () => {
-    axios.post(`https://localhost:5000/logutUser/${user.email}`)
+    axios.post(`https://localhost:5000/logutUser`)
     .then((res)=>console.log(res));
 
     logouruser().then((result) => {
