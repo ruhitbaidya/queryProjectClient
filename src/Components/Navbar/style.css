@@ -1,0 +1,6 @@
+.active{
+    background:transparent !important;
+    color : #000 !important;
+    border-bottom: 2px solid #000;
+    border-radius: 0;
+}

@@ -53,65 +53,67 @@ const AllQuery = () => {
           </form>
         </div>
         <div className="flex items-center justify-center">
-          <button onClick={()=> handelGridChange("1")} className="bg-blue-500 text-white px-[30px] py-[12px] mr-[5px]"><FaRegSquare /></button>
-          <button onClick={()=> handelGridChange("2")} className="bg-blue-500 text-white px-[30px] py-[12px] mr-[5px]"><BsGrid /></button>
-          <button onClick={()=> handelGridChange("3")} className="bg-blue-500 text-white px-[30px] py-[12px] mr-[5px]"><BsGrid3X3 /></button>
+          <button onClick={()=> handelGridChange("1")} className="bg-blue-500 dark:bg-gray-100 text-white px-[30px] py-[12px] mr-[5px]"><FaRegSquare /></button>
+          <button onClick={()=> handelGridChange("2")} className="bg-blue-500 dark:bg-gray-100 text-white px-[30px] py-[12px] mr-[5px]"><BsGrid /></button>
+          <button onClick={()=> handelGridChange("3")} className="bg-blue-500 dark:bg-gray-100 text-white px-[30px] py-[12px] mr-[5px]"><BsGrid3X3 /></button>
         </div>
       </div>
       <div className={`grid grid-cols-${grid} gap-[25px]`}>
         {product.map((item) => {
           return (
-            <div key={item._id} className="rounded shadow-lg p-[10px]">
+            <div key={item._id} className="rounded card  shadow-lg p-[15px] border border-gray-400 flex-col justify-between gap-[25px]">
+         
               <img
-                className="w-full h-[250px]"
+                className="w-full h-[200px] rounded-lg object-cover"
                 src={item.productImageurl}
                 alt="Product"
               />
-              <div className="px-6 py-4">
+          
+              <div className="">
                 <div className="font-bold text-xl mb-2">{item.queryTItle}</div>
-                <p className="text-gray-700 ">
+                <p className=" ">
                   Product Name:{" "}
                   <span className="font-semibold">{item.productName}</span>
                 </p>
-                <p className="text-gray-700 ">
+                <p className=" ">
                   Brand Name:{" "}
                   <span className="font-semibold">{item.productBrand}</span>
                 </p>
-                <p className="text-gray-700 ">
+                <p className=" ">
                   Alteration Reason:{" "}
                   <span className="font-semibold">
                     {item.boycottingDetails}
                   </span>
                 </p>
-                <p className="text-gray-700 ">
+                <p className=" ">
                   Date Posted:{" "}
                   <span className="font-semibold">
                     {item?.userinfotime?.currentTime}
                   </span>
                 </p>
-                <p className="text-gray-700 ">
+                <p className=" ">
                   Recommendation Count:{" "}
                   <span className="font-semibold">
                     {item?.userinfotime?.recommendationCount}
                   </span>
                 </p>
               </div>
-              <div className="px-6 py-4">
+              <div className="">
                 <div className="flex items-center">
                   <img
-                    className="w-12 h-12 rounded-full mr-4"
+                    className="w-8 h-8 rounded-full mr-4"
                     src={item?.userinfotime?.Uphoto}
                     alt="User"
                   />
                   <div className="text-sm">
-                    <p className="text-gray-900 leading-none">
+                    <p className=" leading-none">
                       {item?.userinfotime?.cName}
                     </p>
                   </div>
                 </div>
               </div>
               <Link to={`/queryDetails/${item._id}`}>
-                <button className="w-full bg-gray-400 py-[10px]">
+                <button className="w-full border dark:border-gray-200 dark:bg-gray-800 dark:text-gray-800 py-[10px]">
                   Recommend
                 </button>
               </Link>

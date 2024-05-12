@@ -13,28 +13,30 @@ const ProducsShow = () => {
   return (
     <div className="grid grid-cols-3 gap-[25px]">
         {product.slice(0, 6).map((item)=>{
-            return  <div key={item._id} className="rounded shadow-lg">
-            <img className="w-full h-[250px]" src={item.productImageurl} alt="Product" />
-            <div className="px-6 py-4">
+            return  <div key={item._id} className="rounded card p-[15px] border border-gray-400 shadow-lg dark:text-white flex-col gap-[25px] justify-between">
+         
+            <img className="w-full rounded-lg h-[200px] object-cover" src={item.productImageurl} alt="Product" />
+      
+            <div className="">
               <div className="font-bold text-xl mb-2">{item.queryTItle}</div>
-              <p className="text-gray-700 ">
+              <p className=" ">
                 Product Name: <span className="font-semibold">{item.productName}</span>
               </p>
-              <p className="text-gray-700 ">
+              <p className=" ">
                 Brand Name: <span className="font-semibold">{item.productBrand}</span>
               </p>
-              <p className="text-gray-700 ">
+              <p className=" ">
                 Alteration Reason: <span className="font-semibold">{item.boycottingDetails}</span>
               </p>
-              <p className="text-gray-700 ">
+              <p className=" ">
                 Date Posted: <span className="font-semibold">{item.userinfotime.currentTime}</span>
               </p>
             </div>
-            <div className="px-6 py-4">
+            <div className="mt-[10px]">
               <div className="flex items-center">
-                <img className="w-12 h-12 rounded-full mr-4" src={item.userinfotime.Uphoto} alt="User" />
+                <img className="w-8 h-8 rounded-full mr-4" src={item.userinfotime.Uphoto} alt="User" />
                 <div className="text-sm">
-                  <p className="text-gray-900 leading-none">{item.userinfotime.cName}</p>
+                  <p className="leading-none">{item.userinfotime.cName}</p>
                 </div>
               </div>
             </div>

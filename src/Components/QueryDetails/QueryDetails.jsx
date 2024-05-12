@@ -52,7 +52,7 @@ console.log(counts)
       <div className="container mx-auto px-[20px]">
         <div>
           <div className="flex w-full max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 lg:max-w-4xl">
-            <div className="flex-1">
+            <div className="flex-1 flex items-center justify-center">
               <img src={data.productImageurl} alt="" />
             </div>
             <div className="px-6 py-8  flex-1">
@@ -87,9 +87,9 @@ console.log(counts)
               </div>
               <div className="px-6 py-4">
                 <div className="flex items-center">
-                  <div>
+                  <div className="flex items-center">
                     <img
-                      className="w-12 h-12 rounded-full mr-4"
+                      className="w-8 h-8 rounded-full mr-4"
                       src={data.userinfotime.Uphoto}
                       alt="data"
                     />
@@ -99,7 +99,6 @@ console.log(counts)
                       </p>
                     </div>
                   </div>
-                  <div></div>
                 </div>
               </div>
             </div>
@@ -151,12 +150,12 @@ console.log(counts)
           
           {
             comment.length !== 0 ?   comment.map((item)=>{
-              return <div key={item._id} className="flex gap-[30px] items-center mt-[10px] p-[20px] bg-gray-300">
+              return <div key={item._id} className="rounded-lg flex gap-[30px] items-center mt-[10px] p-[20px] bg-gray-300">
               <div>
-                <img className="w-[200px] h-[200px]" src={item?.reproductImageurl} alt="" />
+                <img className="w-[80px] h-[80px]" src={item?.reproductImageurl} alt="" />
               </div>
               <div>
-                <h2 className="text-[25px] font-[600]">{item.requeryTItle}</h2>
+                <h2 className="text-[20px] font-[600]">{item.requeryTItle}</h2>
                 <p>{item.reboycottingDetails}</p>
                 <p>{item.reName}</p>
                 <p>{item.currentTime}</p>
