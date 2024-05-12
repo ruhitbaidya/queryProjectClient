@@ -56,7 +56,7 @@ function Navbar() {
   );
 
   return (
-    <div className="navbar bg-base-100 container mx-auto border border-b-2">
+    <div className="navbar bg-base-100 container mx-auto dark:border-gray-800">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -82,12 +82,12 @@ function Navbar() {
             {navlink}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">
+        <Link to="/" className="btn btn-ghost text-xl">
           <div className="flex items-center gap-[5px]">
             <AiFillProduct />
             <span>Prod Genius</span>
           </div>
-        </a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navlink}</ul>

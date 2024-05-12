@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { BsGrid } from "react-icons/bs";
 import { BsGrid3X3 } from "react-icons/bs";
 import { FaRegSquare } from "react-icons/fa";
+import Loading from "../Loading";
 const AllQuery = () => {
   const [product, setProduct] = useState([]);
   const [grid, setGrid] = useState("3")
@@ -59,7 +60,11 @@ const AllQuery = () => {
         </div>
       </div>
       <div className={`grid grid-cols-${grid} gap-[25px]`}>
-        {product.map((item) => {
+        {product.length == 0 ? <>
+          <Loading></Loading>
+        </> : 
+        
+        product.map((item) => {
           return (
             <div key={item._id} className="rounded card  shadow-lg p-[15px] border border-gray-400 flex-col justify-between gap-[25px]">
          
