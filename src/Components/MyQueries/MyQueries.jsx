@@ -58,9 +58,11 @@ const MyQueries = () => {
                 <h2 className="text-white text-5xl font-[600] mb-[20px]">
                   Seek Better Alternatives
                 </h2>
-                <button className="btn btn-outline hover:outline-none text-white hover:bg-gray-200 hover:text-gray-700 border border-white">
-                  <Link to="/addQuery">Add Query </Link>
-                </button>
+                <Link to="/addQuery">
+                  <button className="btn btn-outline hover:outline-none text-white hover:bg-gray-200 hover:text-gray-700 border border-white">
+                    Add Query
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -68,6 +70,12 @@ const MyQueries = () => {
       </div>
 
       <div className="container mx-auto px-[20px] my-[50px]">
+        <div className="mb-[70px]">
+          {" "}
+          <h2 className="text-center text-3xl dark:text-white font-[600]">
+            My Query
+          </h2>{" "}
+        </div>
         {myData.length !== 0 ? (
           <>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-[25px]">
@@ -142,6 +150,13 @@ const MyQueries = () => {
               You Have No Product Add Click Top Up button Then You Can Add Your
               Product
             </h3>
+            <div className="text-center">
+              <Link to="/addQuery">
+                <button className="btn btn-outline hover:outline-none dark:text-gray-400 dark:hover:bg-gray-200 dark:hover:text-gray-700 border dark:border-white">
+                  Add Query
+                </button>
+              </Link>
+            </div>
           </>
         )}
       </div>

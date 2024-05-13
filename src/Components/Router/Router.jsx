@@ -14,6 +14,7 @@ import axios from "axios";
 import UpdateQuery from "../UpdateQuery/UpdateQuery";
 import MyRecommindations from "../MyRecommendations/MyRecommindations";
 import Recommendations from "../Recommendations/Recommendations";
+import MyFeature from "../MyFeature/MyFeature";
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
       {
         path: "/allQuery",
         element: <AllQuery></AllQuery>,
+      },
+      {
+        path: "/feature",
+        element: <MyFeature></MyFeature>,
       },
       {
         path: "/queryDetails/:id",

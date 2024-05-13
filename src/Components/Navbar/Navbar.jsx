@@ -1,23 +1,21 @@
 import { useContext, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 
-import  {AuthUserContext}  from "../../AuthContext/AuthContext";
+import { AuthUserContext } from "../../AuthContext/AuthContext";
 import { AiFillProduct } from "react-icons/ai";
 import axios from "axios";
 import { IoIosLogOut } from "react-icons/io";
 import { CiSun } from "react-icons/ci";
 import { FaMoon } from "react-icons/fa";
-import "./style.css"
+import "./style.css";
 function Navbar() {
-  const [modeCh, setModeCh] = useState(true)
+  const [modeCh, setModeCh] = useState(true);
   const { user, logouruser } = useContext(AuthUserContext);
   console.log(user);
 
   const handelLogout = () => {
     axios
-      .get(
-        `http://localhost:5000/logutUser`, { withCredentials: true }
-      )
+      .get(`http://localhost:5000/logutUser`, { withCredentials: true })
       .then((res) => console.log(res));
 
     logouruser().then((result) => {
@@ -27,22 +25,22 @@ function Navbar() {
 
   const modeChange = (text) => {
     const tags = document.getElementsByTagName("html")[0];
-    console.log(tags)
+    console.log(tags);
     if (text === "dark") {
       tags.setAttribute("data-theme", "dark");
-      setModeCh(!modeCh)
+      setModeCh(!modeCh);
     } else {
       tags.setAttribute("data-theme", "light");
       setModeCh(!modeCh);
     }
-  }
+  };
 
   const navlink = (
     <>
       {user ? (
         <>
           <li className="active:border-b-2">
-            <NavLink  to="/">Home</NavLink>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li>
             <NavLink to="/allQuery">Queries</NavLink>
@@ -56,17 +54,23 @@ function Navbar() {
           <li>
             <NavLink to="/myRecommendations"> My recommendations</NavLink>
           </li>
+          <li>
+            <NavLink to="/feature">Feature</NavLink>
+          </li>
         </>
       ) : (
-          <>
-            <li>
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink to="/allQuery">Queries</NavLink>
-            </li>
-          </>
-        )}
+        <>
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/allQuery">Queries</NavLink>
+          </li>
+          <li>
+            <NavLink to="/feature">Feature</NavLink>
+          </li>
+        </>
+      )}
     </>
   );
 
@@ -111,9 +115,20 @@ function Navbar() {
         <div className="navbar-end">
           <div className="flex items-center mt-4 lg:mt-0">
             <div className="text-[22px] flex items-center">
-              {
-                modeCh ? <><button onClick={() => modeChange("dark")}><FaMoon /> </button></> : <> <button onClick={() => modeChange("light")}><CiSun /></button></>
-              }
+              {modeCh ? (
+                <>
+                  <button onClick={() => modeChange("dark")}>
+                    <FaMoon />{" "}
+                  </button>
+                </>
+              ) : (
+                <>
+                  {" "}
+                  <button onClick={() => modeChange("light")}>
+                    <CiSun />
+                  </button>
+                </>
+              )}
             </div>
             {user ? (
               <>
@@ -144,17 +159,16 @@ function Navbar() {
                 </button>
               </>
             ) : (
-                <>
-                  <button className="hidden mx-4  transition-colors duration-300 transform lg:block  dark:hover:text-gray-400 focus:text-gray-700 dark:focus:text-gray-400 focus:outline-none">
-                    <Link to="/login">Login</Link>
-                  </button>
-                </>
-              )}
+              <>
+                <button className="hidden mx-4  transition-colors duration-300 transform lg:block  dark:hover:text-gray-400 focus:text-gray-700 dark:focus:text-gray-400 focus:outline-none">
+                  <Link to="/login">Login</Link>
+                </button>
+              </>
+            )}
           </div>
         </div>
       </div>
     </div>
-
   );
 }
 

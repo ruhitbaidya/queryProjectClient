@@ -51,7 +51,7 @@ console.log(counts)
     <div className="my-[50px]">
       <div className="container mx-auto px-[20px]">
         <div>
-          <div className="flex w-full max-w-sm mx-auto overflow-hidden  rounded-lg shadow-lg dark:bg-gray-800 lg:max-w-4xl">
+          <div className="lg:flex w-full max-w-sm mx-auto overflow-hidden  rounded-lg shadow-lg dark:bg-gray-800 lg:max-w-4xl">
             <div className="flex-1 flex items-center justify-center">
               <img src={data.productImageurl} alt="" />
             </div>
