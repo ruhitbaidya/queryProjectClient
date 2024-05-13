@@ -6,11 +6,14 @@ import Footer from "../Footer/Footer"
 const Main = () => {
   return (
     <>
+      <div className="mb-[100px]">
         <Navbar></Navbar>
-        <div className="min-h-[48vh]">
+      </div>
+
+      <div className="min-h-[48vh]">
         <Outlet></Outlet>
-        </div>
-        <Footer></Footer>
+      </div>
+      <Footer></Footer>
     </>
   )
 }

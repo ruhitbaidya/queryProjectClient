@@ -3,7 +3,8 @@ import { GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut, creat
 import auth from "../firebase/firebase";
 import axios from "axios";
 
-export const AuthUserContext = createContext(null)
+export const AuthUserContext = createContext(null);
+
 const AuthContext = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);

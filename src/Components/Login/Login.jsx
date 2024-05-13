@@ -4,6 +4,7 @@ import { useContext, useEffect } from "react";
 import { AuthUserContext } from "../../AuthContext/AuthContext";
 import { ToastContainer, toast } from 'react-toastify';
 import logo from "../../assets/logo.png"
+import { AiFillProduct } from "react-icons/ai";
 
 const Login = () => {
   const {user, googlesignIn, loginwithEmailPass} = useContext(AuthUserContext)
@@ -45,11 +46,10 @@ const Login = () => {
         <ToastContainer />
           <div className="lg:flex">
             <div className="lg:w-1/2">
-              <img
-                className="w-auto h-7 sm:h-8"
-                src={logo}
-                alt=""
-              />
+            <div className="flex items-center text-[30px] gap-[5px]">
+              <AiFillProduct />
+              <span>Prod Genius</span>
+            </div>
               <h1 className="mt-4 text-gray-600 dark:text-gray-300 md:text-lg">
                 Welcome back
               </h1>

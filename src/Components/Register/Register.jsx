@@ -3,6 +3,7 @@ import { AuthUserContext } from "../../AuthContext/AuthContext";
 import logo from "../../assets/logo.png";
 import {useNavigate} from "react-router-dom"
 import { ToastContainer, toast } from 'react-toastify';
+import { AiFillProduct } from "react-icons/ai";
 const Register = () => {
   const {signUpEmailPassword, userUpdate } = useContext(AuthUserContext);
   const navigate = useNavigate()
@@ -38,11 +39,10 @@ const Register = () => {
           <div className="lg:flex">
           <ToastContainer />
             <div className="lg:w-1/2">
-              <img
-                className="w-auto h-7 sm:h-8"
-                src={logo}
-                alt=""
-              />
+            <div className="flex text-[30px] items-center gap-[5px]">
+              <AiFillProduct />
+              <span>Prod Genius</span>
+            </div>
               <h1 className="mt-4 text-gray-600 dark:text-gray-300 md:text-lg">
                 Welcome back
               </h1>
