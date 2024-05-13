@@ -16,7 +16,7 @@ const UpdateQuery = () => {
         const boycottingDetails = form.boycottingDetails.value;
         const infos = {productName, productBrand, productImageurl, queryTItle, boycottingDetails}
         console.log(infos)
-        axios.put(`http://localhost:5000/updateProduct/${_id}`, infos,{withCredentials : true})
+        axios.put(`https://crud-server-alternative-product.vercel.app/updateProduct/${_id}`, infos,{withCredentials : true})
         .then((res)=> {
            if(res.data.modifiedCount > 0){
             toast.success("Successfully Update")

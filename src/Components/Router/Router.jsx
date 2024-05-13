@@ -69,7 +69,7 @@ const router = createBrowserRouter([
       {
         path: "/queryDetails/:id",
         loader: ({ params }) =>
-          axios.get(`http://localhost:5000/findData/${params.id}`, {
+          axios.get(`https://crud-server-alternative-product.vercel.app/findData/${params.id}`, {
             withCredentials: true,
           }),
         element: (
@@ -81,7 +81,7 @@ const router = createBrowserRouter([
       {
         path: "/queryUpdate/:id",
         loader: ({ params }) =>
-          axios.get(`http://localhost:5000/findData/${params.id}`, {
+          axios.get(`https://crud-server-alternative-product.vercel.app/findData/${params.id}`, {
             withCredentials: true,
           }),
         element: (

@@ -1,13 +1,13 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { AuthUserContext } from "../../AuthContext/AuthContext";
 import { ToastContainer, toast } from 'react-toastify';
-import logo from "../../assets/logo.png"
+
 import { AiFillProduct } from "react-icons/ai";
 
 const Login = () => {
-  const {user, googlesignIn, loginwithEmailPass} = useContext(AuthUserContext)
+  const {googlesignIn, loginwithEmailPass} = useContext(AuthUserContext)
   const location = useLocation();
   const navigate = useNavigate()
   const handelLoginemailpass = (e)=>{
@@ -29,6 +29,7 @@ const Login = () => {
   const handelGooleSignIn = ()=>{
       googlesignIn()
       .then((result)=>{
+        console.log(result)
         toast.success("successfully Login")
       })
       .catch((err)=>{

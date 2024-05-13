@@ -7,7 +7,7 @@ const Recommendations = () => {
   const [mycomment, setMyComment] = useState([]);
   const {user} = useContext(AuthUserContext)
   useEffect(()=>{
-      axios.get(`http://localhost:5000/getOtherComment/${user.email}`, {withCredentials:true})
+      axios.get(`https://crud-server-alternative-product.vercel.app/getOtherComment/${user.email}`, {withCredentials:true})
       .then((res)=>{
         setMyComment(res.data)
       })

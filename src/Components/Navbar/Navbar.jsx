@@ -15,7 +15,7 @@ function Navbar() {
 
   const handelLogout = () => {
     axios
-      .get(`http://localhost:5000/logutUser`, { withCredentials: true })
+      .get(`https://crud-server-alternative-product.vercel.app/logutUser`, { withCredentials: true })
       .then((res) => console.log(res));
 
     logouruser().then((result) => {

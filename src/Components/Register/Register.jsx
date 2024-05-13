@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { AuthUserContext } from "../../AuthContext/AuthContext";
-import logo from "../../assets/logo.png";
 import {useNavigate} from "react-router-dom"
 import { ToastContainer, toast } from 'react-toastify';
 import { AiFillProduct } from "react-icons/ai";

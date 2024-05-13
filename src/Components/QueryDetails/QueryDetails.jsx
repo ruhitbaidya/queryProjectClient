@@ -29,7 +29,7 @@ const QueryDetails = () => {
 
  
 
-    axios.post("http://localhost:5000/comment", infos,{withCredentials : true})
+    axios.post("https://crud-server-alternative-product.vercel.app/comment", infos,{withCredentials : true})
     .then((res)=> {
         if(res.data.insertedId){
             toast.success("successfully Create Product")
@@ -41,7 +41,7 @@ const QueryDetails = () => {
 }
 
 useEffect(()=>{
-    axios.get( `http://localhost:5000/allcomment/${data._id}`, {withCredentials : true})
+    axios.get( `https://crud-server-alternative-product.vercel.app/allcomment/${data._id}`, {withCredentials : true})
     .then((res)=>{
       setComment(res.data)
     })

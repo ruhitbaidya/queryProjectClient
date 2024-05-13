@@ -11,7 +11,7 @@ const MyQueries = () => {
   const email = user.email;
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/getProductByEmail?email=${email}`, {
+      .get(`https://crud-server-alternative-product.vercel.app/getProductByEmail?email=${email}`, {
         withCredentials: true,
       })
       .then((res) => {
@@ -30,7 +30,7 @@ const MyQueries = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`http://localhost:5000/delete/${id}`).then((res) => {
+        axios.delete(`https://crud-server-alternative-product.vercel.app/delete/${id}`).then((res) => {
           if (res.data.deletedCount > 0) {
             const finial = myData.filter((ids) => ids._id !== id);
             setMyData(finial);
