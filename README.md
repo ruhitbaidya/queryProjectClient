@@ -2,7 +2,7 @@
 
 **Website Name:** Prod Genius
 
-**Live Site URL:** [Prod Genius](https://www.aichathub.com)
+**Live Site URL:** [Prod Genius](https://alternative-product-bb915.web.app)
 
 ---
 
