@@ -13,26 +13,26 @@ const ProducsShow = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-[25px] mt-[50px]">
         {product.slice(0, 6).map((item)=>{
-            return  <div key={item.id} className="max-w-2xl overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
+            return  <div key={item.id} className="max-w-2xl overflow-hidden border rounded-lg shadow-md dark:bg-gray-800">
             <img
               className="object-cover w-full h-64"
               src={item.productImageurl}
             />
             <div className="p-6">
               <div>
-                <span className="text-xs font-medium text-blue-600 uppercase dark:text-blue-400">
+                <span className="text-xs font-medium text-blue-600 uppercase dark:text-gray-400">
                   {item.productBrand}
                 </span>
                 <a
                   href="#"
-                  className="block mt-2 text-xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600 hover:underline"
+                  className="block mt-2 text-xl font-semibold  transition-colors duration-300 transform dark:text-white hover:text-gray-600 hover:underline"
                   tabIndex={0}
                   role="link"
                 >
                   {item.queryTItle}
                 </a>
-                <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">{item.productName}</p>
-                <p className="mt-2 text-sm  text-center text-gray-200 dark:text-gray-400 bg-red-400">
+                <p className="mt-2 text-sm  dark:text-gray-400">{item.productName}</p>
+                <p className="mt-2 text-sm  text-center  text-gray-200 bg-red-400 dark:bg-gray-600">
                   {item.boycottingDetails}
                 </p>
               </div>
@@ -45,14 +45,14 @@ const ProducsShow = () => {
                     />
                     <a
                       href="#"
-                      className="mx-2 font-semibold text-gray-700 dark:text-gray-200"
+                      className="mx-2 font-semibold  dark:text-gray-200"
                       tabIndex={0}
                       role="link"
                     >
                       {item.userinfotime.cName}
                     </a>
                   </div>
-                  <span className="mx-1 text-xs text-gray-600 dark:text-gray-300">
+                  <span className="mx-1 text-xs  dark:text-gray-300">
                     {item.userinfotime.currentTime}
                   </span>
                 </div>

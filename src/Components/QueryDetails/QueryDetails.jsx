@@ -51,34 +51,34 @@ console.log(counts)
     <div className="my-[50px]">
       <div className="container mx-auto px-[20px]">
         <div>
-          <div className="flex w-full max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 lg:max-w-4xl">
+          <div className="flex w-full max-w-sm mx-auto overflow-hidden  rounded-lg shadow-lg dark:bg-gray-800 lg:max-w-4xl">
             <div className="flex-1 flex items-center justify-center">
               <img src={data.productImageurl} alt="" />
             </div>
             <div className="px-6 py-8  flex-1">
               <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">{data.queryTItle}</div>
-                <p className="text-gray-700 ">
+                <p className="dark:text-gray-700 ">
                   Product Name:{" "}
                   <span className="font-semibold">{data.productName}</span>
                 </p>
-                <p className="text-gray-700 ">
+                <p className="dark:text-gray-700 ">
                   Brand Name:{" "}
                   <span className="font-semibold">{data.productBrand}</span>
                 </p>
-                <p className="text-gray-700 ">
+                <p className="dark:text-gray-700 ">
                   Alteration Reason:{" "}
                   <span className="font-semibold">
                     {data.boycottingDetails}
                   </span>
                 </p>
-                <p className="text-gray-700 ">
+                <p className="dark:text-gray-700 ">
                   Date Posted:{" "}
                   <span className="font-semibold">
                     {data.userinfotime.currentTime}
                   </span>
                 </p>
-                <p className="text-gray-700 ">
+                <p className="dark:text-gray-700 ">
                   Recommendation Count:{" "}
                   <span className="font-semibold">
                     {counts}
@@ -94,7 +94,7 @@ console.log(counts)
                       alt="data"
                     />
                     <div className="text-sm">
-                      <p className="text-gray-900 leading-none">
+                      <p className="dark:text-gray-900 leading-none">
                         {data.userinfotime.cName}
                       </p>
                     </div>
@@ -117,29 +117,29 @@ console.log(counts)
                         <div className="grid lg:grid-cols-3 gap-[30px] mt-[20px]">
                             <div className="">
                                 <label htmlFor="">Recommendation Product Name</label>
-                                <input required className="w-full focus:outline-none px-[10px] py-[10px] bg-gray-200" name="recommendproductName"  type="text" placeholder="Recommendation Product Name" />
+                                <input required className="block w-full py-3  border rounded-lg px-5 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" name="recommendproductName"  type="text" placeholder="Recommendation Product Name" />
                             </div>
                             
                             <div className="">
                                 <label htmlFor="">Recommendation TItle</label>
-                                <input required className="w-full focus:outline-none px-[10px] py-[10px] bg-gray-200" name="recomentqueryTItle"  type="text" placeholder="Recommendation TItle" />
+                                <input required className="block w-full py-3  border rounded-lg px-5 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" name="recomentqueryTItle"  type="text" placeholder="Recommendation TItle" />
                             </div>
               
                             <div>
                                 <label htmlFor="">Recommendation product Image-URL</label>
-                                <input required className="w-full focus:outline-none px-[10px] py-[10px] bg-gray-200" name="recomentproductImageurl"  type="text" placeholder="Recommendation product Image-URL" />
+                                <input required className="block w-full py-3  border rounded-lg px-5 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" name="recomentproductImageurl"  type="text" placeholder="Recommendation product Image-URL" />
                             </div>
                         </div>
                         
                         <div className="mt-[20px]">
                             <div className="">
                                 <label htmlFor="">Recommendation Reason </label>
-                                <textarea required className="w-full focus:outline-none px-[10px] py-[10px] bg-gray-200" name="recomentboycottingDetails" id="" cols="30" rows="5" placeholder="Recommendation Reason"></textarea>
+                                <textarea required className="block w-full py-3  border rounded-lg px-5 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" name="recomentboycottingDetails" id="" cols="30" rows="5" placeholder="Recommendation Reason"></textarea>
                             </div>
                         </div>
                         <div className="mt-[20px]">
                             <div className="">
-                                <button className="w-full py-[10px] bg-gray-200">Add Recommendation</button>
+                                <button className="block w-full py-3  border rounded-lg px-5 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40">Add Recommendation</button>
                             </div>
                         </div>
                     </form>
@@ -150,7 +150,7 @@ console.log(counts)
           
           {
             comment.length !== 0 ?   comment.map((item)=>{
-              return <div key={item._id} className="rounded-lg flex gap-[30px] items-center mt-[10px] p-[20px] bg-gray-300">
+              return <div key={item._id} className="rounded-lg flex gap-[30px] items-center mt-[10px] p-[20px] block w-full py-3  border rounded-lg px-5 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600">
               <div>
                 <img className="w-[80px] h-[80px]" src={item?.reproductImageurl} alt="" />
               </div>

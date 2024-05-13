@@ -41,8 +41,8 @@ function Navbar() {
     <>
       {user ? (
         <>
-          <li>
-            <NavLink to="/">Home</NavLink>
+          <li className="active:border-b-2">
+            <NavLink  to="/">Home</NavLink>
           </li>
           <li>
             <NavLink to="/allQuery">Queries</NavLink>
@@ -120,7 +120,7 @@ function Navbar() {
                 <button
                   title="Logout"
                   onClick={handelLogout}
-                  className="hidden mx-4 text-[22px] text-gray-600 transition-colors duration-300 transform lg:block dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 focus:text-gray-700 dark:focus:text-gray-400 focus:outline-none"
+                  className="hidden mx-4 text-[22px] dark:text-gray-800 transition-colors duration-300 transform lg:block dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 focus:text-gray-700 dark:focus:text-gray-400 focus:outline-none"
                   aria-label="show notifications"
                 >
                   <IoIosLogOut />

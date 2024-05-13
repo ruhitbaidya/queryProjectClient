@@ -1,9 +1,6 @@
 .active{
     background:transparent !important;
-    color : #000 !important;
-    border-bottom: 2px solid #000;
+    color: #a39191 !important;
+    border-bottom: 2px solid #d89782 ;
     border-radius: 0;
-}
-.active:focus{
-    background: transparent !important;
 }

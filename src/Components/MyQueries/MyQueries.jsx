@@ -86,25 +86,25 @@ const MyQueries = () => {
                       <div className="font-bold text-xl mb-2">
                         {item.queryTItle}
                       </div>
-                      <p className="text-gray-700 ">
+                      <p className="dark:text-gray-700 ">
                         Product Name:{" "}
                         <span className="font-semibold">
                           {item.productName}
                         </span>
                       </p>
-                      <p className="text-gray-700 ">
+                      <p className="dark:text-gray-700 ">
                         Brand Name:{" "}
                         <span className="font-semibold">
                           {item.productBrand}
                         </span>
                       </p>
-                      <p className="text-gray-700 ">
+                      <p className="dark:text-gray-700 ">
                         Alteration Reason:{" "}
                         <span className="font-semibold">
                           {item.boycottingDetails}
                         </span>
                       </p>
-                      <p className="text-gray-700 ">
+                      <p className="dark:text-gray-700 ">
                         Date Posted:{" "}
                         <span className="font-semibold">
                           {item.userinfotime.currentTime}

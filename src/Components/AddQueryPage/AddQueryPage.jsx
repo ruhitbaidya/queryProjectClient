@@ -32,32 +32,32 @@ const AddQueryPage = () => {
                     <ToastContainer />
                     <h2 className="text-4xl font-[600] text-center">Add Query for Better Alternatives</h2>
                 </div>
-                <div className="mt-[60px]"> 
+                <div className="mt-[60px] dark:bg-gray-800"> 
                     <form onSubmit={handelAddSubmit}>
                         <div className="grid lg:grid-cols-3 gap-[30px] mt-[20px]">
                             <div className="">
                                 <label htmlFor="">Product Name</label>
-                                <input required className="w-full focus:outline-none px-[10px] py-[10px] bg-gray-200" name="productName"  type="text" placeholder="Product Name" />
+                                <input required className="block w-full py-3  border rounded-lg px-5 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" name="productName"  type="text" placeholder="Product Name" />
                             </div>
                             <div>
                                 <label htmlFor="">Product Brand</label>
-                                <input required className="w-full focus:outline-none px-[10px] py-[10px] bg-gray-200" name="productBrand"  type="text" placeholder="Product Brand" />
+                                <input required className="block w-full py-3  border rounded-lg px-5 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" name="productBrand"  type="text" placeholder="Product Brand" />
                             </div>
                             <div>
                                 <label htmlFor="">Product Image-URL</label>
-                                <input required className="w-full focus:outline-none px-[10px] py-[10px] bg-gray-200" name="productImageurl"  type="text" placeholder="Product Image-URL" />
+                                <input required className="block w-full py-3  border rounded-lg px-5 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" name="productImageurl"  type="text" placeholder="Product Image-URL" />
                             </div>
                         </div>
                         <div className="grid lg:grid-cols-1 gap-[30px] mt-[20px]">
                             <div className="">
                                 <label htmlFor="">Query TItle</label>
-                                <input required className="w-full focus:outline-none px-[10px] py-[10px] bg-gray-200" name="queryTItle"  type="text" placeholder="Query TItle" />
+                                <input required className="block w-full py-3  border rounded-lg px-5 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" name="queryTItle"  type="text" placeholder="Query TItle" />
                             </div>
                         </div>
                         <div className="mt-[20px]">
                             <div className="">
                                 <label htmlFor="">Boycotting Reason Details</label>
-                                <textarea required className="w-full focus:outline-none px-[10px] py-[10px] bg-gray-200" name="boycottingDetails" id="" cols="30" rows="5" placeholder="Boycotting Reason Details"></textarea>
+                                <textarea required className="block w-full py-3  border rounded-lg px-5 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" name="boycottingDetails" id="" cols="30" rows="5" placeholder="Boycotting Reason Details"></textarea>
                             </div>
                         </div>
                         <div className="mt-[20px]">

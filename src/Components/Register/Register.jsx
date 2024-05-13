@@ -34,7 +34,7 @@ const Register = () => {
   }
   return (
     <>
-      <section className="bg-white dark:bg-gray-900">
+      <section className=" dark:bg-gray-900">
         <div className="container px-6 py-24 mx-auto lg:py-32">
           <div className="lg:flex">
           <ToastContainer />
@@ -43,10 +43,10 @@ const Register = () => {
               <AiFillProduct />
               <span>Prod Genius</span>
             </div>
-              <h1 className="mt-4 text-gray-600 dark:text-gray-300 md:text-lg">
+              <h1 className="mt-4  dark:text-gray-300 md:text-lg">
                 Welcome back
               </h1>
-              <h1 className="mt-4 text-2xl font-medium text-gray-800 capitalize lg:text-3xl dark:text-white">
+              <h1 className="mt-4 text-2xl font-medium  capitalize lg:text-3xl dark:text-white">
                 Sign up  your account
               </h1>
             </div>
@@ -56,7 +56,7 @@ const Register = () => {
                   <input
                     name="name"
                     type="text"
-                    className="block w-full py-3 text-gray-700 bg-white border rounded-lg px-5 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                    className="block w-full py-3  border rounded-lg px-5 dark:bg-gray-900 dark:text-gray-100 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
                     placeholder="Name"
                   />
                 </div>
@@ -64,7 +64,7 @@ const Register = () => {
                   <input
                     name="email"
                     type="email"
-                    className="block w-full py-3 text-gray-700 bg-white border rounded-lg px-5 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                    className="block w-full py-3   border rounded-lg px-5 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
                     placeholder="Email address"
                   />
                 </div>
@@ -72,7 +72,7 @@ const Register = () => {
                   <input
                     name="password"
                     type="password"
-                    className="block w-full px-5 py-3 text-gray-700 bg-white border rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                    className="block w-full px-5 py-3  dark:text-white border rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
                     placeholder="Password"
                   />
                 </div>
@@ -80,7 +80,7 @@ const Register = () => {
                   <input
                     name="photo"
                     type="text"
-                    className="block w-full px-5 py-3 text-gray-700 bg-white border rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                    className="block w-full px-5 py-3  border rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
                     placeholder="Photo Url"
                   />
                 </div>
