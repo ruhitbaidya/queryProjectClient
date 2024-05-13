@@ -70,7 +70,7 @@ const MyQueries = () => {
       <div className="container mx-auto px-[20px] my-[50px]">
         {myData.length !== 0 ? (
           <>
-            <div className="grid grid-cols-3 gap-[25px]">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-[25px]">
               {myData.map((item) => {
                 return (
                   <div

@@ -42,7 +42,7 @@ const AllQuery = () => {
   }
   return (
     <div className="container mx-auto px-[20px] my-[50px]">
-      <div className="my-[70px] grid grid-cols-2 gap-[30px]">
+      <div className="my-[70px] grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
         <div >
           <form onSubmit={handelSearch}>
           <label className="input input-bordered flex items-center gap-2">
@@ -53,13 +53,13 @@ const AllQuery = () => {
           </label>
           </form>
         </div>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center hidden lg:flex">
           <button onClick={()=> handelGridChange("1")} className="bg-blue-500 dark:bg-gray-100 text-white px-[30px] py-[12px] mr-[5px]"><FaRegSquare /></button>
           <button onClick={()=> handelGridChange("2")} className="bg-blue-500 dark:bg-gray-100 text-white px-[30px] py-[12px] mr-[5px]"><BsGrid /></button>
           <button onClick={()=> handelGridChange("3")} className="bg-blue-500 dark:bg-gray-100 text-white px-[30px] py-[12px] mr-[5px]"><BsGrid3X3 /></button>
         </div>
       </div>
-      <div className={`grid grid-cols-${grid} gap-[25px]`}>
+      <div className={`grid grid-cols-1 lg:grid-cols-${grid} gap-[25px]`}>
         {product.length == 0 ? <>
           <Loading></Loading>
         </> : 

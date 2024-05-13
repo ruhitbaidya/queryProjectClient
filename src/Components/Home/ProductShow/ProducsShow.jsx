@@ -11,7 +11,7 @@ const ProducsShow = () => {
         })
     }, [])
   return (
-    <div className="grid grid-cols-3 gap-[25px] mt-[50px]">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-[25px] mt-[50px]">
         {product.slice(0, 6).map((item)=>{
             return  <div key={item.id} className="max-w-2xl overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
             <img

@@ -130,7 +130,7 @@ function Navbar() {
                   className="flex items-center focus:outline-none"
                   aria-label="toggle profile dropdown"
                 >
-                  <div className="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
+                  <div className="ml-[10px] w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
                     <img
                       src={user.photoURL}
                       className="object-cover w-full h-full"
@@ -138,9 +138,9 @@ function Navbar() {
                     />
                   </div>
 
-                  <h3 className="mx-2 text-gray-700 dark:text-gray-200 lg:hidden">
+                  {/* <h3 className="mx-2 text-gray-700 dark:text-gray-200 lg:hidden">
                     {user ?.displayName}
-                  </h3>
+                  </h3> */}
                 </button>
               </>
             ) : (
