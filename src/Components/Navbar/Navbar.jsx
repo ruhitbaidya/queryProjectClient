@@ -100,6 +100,7 @@ function Navbar() {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               {navlink}
+              <li><Link to="/login">Login</Link></li>
             </ul>
           </div>
           <Link to="/" className="btn btn-ghost text-xl">
@@ -113,11 +114,11 @@ function Navbar() {
           <ul className="menu menu-horizontal px-1">{navlink}</ul>
         </div>
         <div className="navbar-end">
-          <div className="flex items-center mt-4 lg:mt-0">
+          <div className="flex items-center">
             <div className="text-[22px] flex items-center">
               {modeCh ? (
                 <>
-                  <button onClick={() => modeChange("dark")}>
+                  <button  onClick={() => modeChange("dark")}>
                     <FaMoon />{" "}
                   </button>
                 </>
@@ -135,7 +136,7 @@ function Navbar() {
                 <button
                   title="Logout"
                   onClick={handelLogout}
-                  className="hidden mx-4 text-[22px] dark:text-gray-800 transition-colors duration-300 transform lg:block dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 focus:text-gray-700 dark:focus:text-gray-400 focus:outline-none"
+                  className="hidden mx-4 text-[22px] dark:text-gray-800 transition-colors duration-300 transform lg:block  hover:text-gray-700 dark:hover:text-gray-400 focus:text-gray-700 dark:focus:text-gray-400 focus:outline-none"
                   aria-label="show notifications"
                 >
                   <IoIosLogOut />
