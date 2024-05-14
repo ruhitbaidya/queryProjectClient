@@ -21,7 +21,7 @@ const Register = () => {
         console.log(result)
         toast.success("User Create Successfully");
         navigate("/")
-        window.location.reload();
+        location.reload();
       })
       .catch((err)=>{
         toast.error(err.message.split(":")[1])

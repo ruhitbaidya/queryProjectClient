@@ -31,6 +31,7 @@ const Login = () => {
       .then((result)=>{
         console.log(result)
         toast.success("successfully Login")
+        navigate(location.state || "/")
       })
       .catch((err)=>{
         const data = err.message.split(":")[1];
@@ -89,18 +90,17 @@ const Login = () => {
                   </Link>
                 </div>
                 <div>
-                <a
-                  href="#"
-                  className="flex items-center justify-center px-6 py-3 mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
+                
+                </div>
+              </form>
+              <button
+                  className="flex items-center justify-center px-6 py-3 mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600 w-full"
                   onClick={handelGooleSignIn}
                 >
                   
                   <span className="mx-auto flex items-center gap-[10px]"> <FaGoogle /> Sign in with Google</span>
-                </a>
+                </button>
                 <p className="mt-[20px] text-center">If You Have No Account Please <Link to="/register" className="text-blue-500"> Register</Link></p>
-                </div>
-              </form>
-              
             </div>
           </div>
         </div>

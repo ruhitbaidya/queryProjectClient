@@ -24,6 +24,9 @@ const AddQueryPage = () => {
                 form.reset()
             }
         })
+        .catch(err =>{
+            console.log(err)
+        })
     }
     return (
         <div className="my-[50px]">

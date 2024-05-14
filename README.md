@@ -2,7 +2,7 @@
 
 **Website Name:** Prod Genius
 
-**Live Site URL:** [Prod Genius](https://alternative-product-bb915.web.app)
+**Live Site URL:** [Prod Genius](https://crud-server-alternative-product.vercel.app)
 
 ---
 
