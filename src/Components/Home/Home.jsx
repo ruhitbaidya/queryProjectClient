@@ -1,3 +1,4 @@
+
 import TitleHeader from "../TitleHeader";
 import Banner from "./Banner/Banner";
 import Fetcher from "./Fetcher/Fetcher";
@@ -17,7 +18,6 @@ const Home = () => {
       <ProducsShow></ProducsShow>
       <TitleHeader title="Our New Feature" description="Experience the future of information retrieval with SmartSearch! Seamlessly explore vast knowledge realms with precision and speed. Your ultimate tool for discovery awaits!" />
       <Fetcher></Fetcher>
-      
       <Testimonial></Testimonial>
       </div>
     </div>
