@@ -7,7 +7,7 @@ const Cardpage = () => {
 
   const totalPrice = data.data.reduce((a, b)=> a + parseInt(b.price) , 0);
   const handeCardDelete = (id)=>{
-    axios.delete(`http://localhost:5000/deleteCardProduct/${id}`,{withCredentials : true})
+    axios.delete(`https://crud-server-alternative-product.vercel.app/deleteCardProduct/${id}`,{withCredentials : true})
     .then((res)=> {
         console.log(res)
         if(res.data.deletedCount > 0){
