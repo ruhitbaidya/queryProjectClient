@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
-
+import { FaShoppingCart } from "react-icons/fa";
 import { AuthUserContext } from "../../AuthContext/AuthContext";
 import { AiFillProduct } from "react-icons/ai";
 import axios from "axios";
@@ -8,16 +8,17 @@ import { IoIosLogOut } from "react-icons/io";
 import { CiSun } from "react-icons/ci";
 import { FaMoon } from "react-icons/fa";
 import "./style.css";
+import SecureAxis from "../Hooks/SecureAxis";
 function Navbar() {
+  const [data] = SecureAxis();
   const [modeCh, setModeCh] = useState(true);
   const { user, logouruser } = useContext(AuthUserContext);
-  console.log(user);
 
   const handelLogout = () => {
     axios
-      .get(`https://crud-server-alternative-product.vercel.app/logutUser`, { withCredentials: true })
+      .get(`http://localhost:5000/logutUser`, { withCredentials: true })
       .then((res) => {
-        console.log(res)
+        console.log(res);
         location.reload();
       });
 
@@ -103,7 +104,9 @@ function Navbar() {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               {navlink}
-              <li><Link to="/login">Login</Link></li>
+              <li>
+                <Link to="/login">Login</Link>
+              </li>
             </ul>
           </div>
           <Link to="/" className="btn btn-ghost text-xl">
@@ -121,7 +124,7 @@ function Navbar() {
             <div className="text-[22px] flex items-center">
               {modeCh ? (
                 <>
-                  <button  onClick={() => modeChange("dark")}>
+                  <button onClick={() => modeChange("dark")}>
                     <FaMoon />{" "}
                   </button>
                 </>
@@ -136,6 +139,13 @@ function Navbar() {
             </div>
             {user ? (
               <>
+                <Link to="/cardPage">
+                  <button className="btn mx-[10px]">
+                    <FaShoppingCart className="text-[20px]" />
+                    <div className="badge">{data?.data?.length}</div>
+                  </button>
+                </Link>
+
                 <button
                   title="Logout"
                   onClick={handelLogout}
