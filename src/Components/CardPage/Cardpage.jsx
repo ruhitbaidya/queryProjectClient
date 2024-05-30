@@ -1,13 +1,20 @@
 import axios from "axios";
 import SecureAxis from "../Hooks/SecureAxis";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AuthUserContext } from "../../AuthContext/AuthContext";
+import { useEffect } from "react";
 
 const Cardpage = () => {
   const [data, refetch] = SecureAxis();
-
+  const {setMoney } = useContext(AuthUserContext)
   const totalPrice = data.data.reduce((a, b)=> a + parseInt(b.price) , 0);
+ 
+  useEffect(()=>{
+    setMoney(totalPrice)
+  }, [setMoney, totalPrice])
   const handeCardDelete = (id)=>{
-    axios.delete(`https://crud-server-alternative-product.vercel.app/deleteCardProduct/${id}`,{withCredentials : true})
+    axios.delete(`https://ruhitproductserver.vercel.app/deleteCardProduct/${id}`,{withCredentials : true})
     .then((res)=> {
         console.log(res)
         if(res.data.deletedCount > 0){

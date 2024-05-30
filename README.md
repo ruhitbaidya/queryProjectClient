@@ -2,7 +2,7 @@
 
 **Website Name:** Prod Genius
 
-**Live Site URL:** [Prod Genius](https://crud-server-alternative-product.vercel.app)
+**Live Site URL:** [Prod Genius](https://ruhitproductserver.vercel.app)
 
 ---
 

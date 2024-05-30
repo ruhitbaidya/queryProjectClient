@@ -8,6 +8,7 @@ export const AuthUserContext = createContext(null);
 const AuthContext = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [money, setMoney] = useState(0)
   console.log(auth)
   const googlesignIn = () => {
     setLoading(true)
@@ -31,7 +32,7 @@ const AuthContext = ({ children }) => {
       setUser(users);
       setLoading(false);
       if(users){
-        axios.get(`https://crud-server-alternative-product.vercel.app/jwtTokenCreate/${users.email}`, {withCredentials : true})
+        axios.get(`https://ruhitproductserver.vercel.app/jwtTokenCreate/${users.email}`, {withCredentials : true})
         .then((res)=> console.log(res.data))
       }
     })
@@ -39,7 +40,7 @@ const AuthContext = ({ children }) => {
       unsubscribe();
     }
   }, [])
-  const infos = { user, loading, setLoading, googlesignIn, logouruser, signUpEmailPassword,loginwithEmailPass, userUpdate }
+  const infos = { user, loading, setLoading, googlesignIn, logouruser, signUpEmailPassword,loginwithEmailPass, userUpdate,setMoney ,money}
   return (
     <AuthUserContext.Provider value={infos}>
       {children}

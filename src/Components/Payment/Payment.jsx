@@ -1,17 +1,48 @@
-import {loadStripe} from "@stripe/stripe-js";
-import {Elements} from "@stripe/react-stripe-js"
-import CheckOutForm from "./CheckOutForm";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+import { useContext, useEffect, useState } from "react";
+import { AuthUserContext } from "../../AuthContext/AuthContext";
+import CheckOut from "../Checkout/CheckOut";
 
-const stripePromise = loadStripe("pk_test_51PKjZzCZsyVMtq3pYaTLPjSaixJCHVuZh9d0gPSPzmvuBQWngZvZo3c3RRGddrn0q4MH6PRHcaSN9Mv7HkJ96B3B00xpFsBcua")
+const stripePromise = loadStripe(import.meta.env.VITE_PAYMENT_SECRATE);
+
 
 const PaymentsMoney = () => {
-  return (
-    <div>
-      <Elements stripe={stripePromise}>
-        <CheckOutForm></CheckOutForm>
-      </Elements>
-    </div>
-  )
-}
+  const {money} = useContext(AuthUserContext)
+  const [clientSecret, setClientSecret] = useState("");
+  console.log(money)
+  useEffect(()=>{
+      fetch("https://ruhitproductserver.vercel.app/payment-create", {
+        method : "POST",
+        headers : {
+          "content-type" : "application/json"
+        },
+        body : JSON.stringify({money})
+      })
+      .then((res)=> res.json())
+      .then((data)=> setClientSecret(data.clientSecrate))
+  }, [money])
 
-export default PaymentsMoney
+  console.log(clientSecret)
+  const appearance = {
+    theme: 'stripe',
+  };
+  const options = {
+    clientSecret,
+    appearance,
+  };
+
+  return (
+    <>
+       <div className="w-[40%] mx-auto">
+       {clientSecret && (
+        <Elements options={options} stripe={stripePromise}>
+          <CheckOut></CheckOut>
+        </Elements>
+      )}
+       </div>
+    </>
+  );
+};
+
+export default PaymentsMoney;

@@ -16,7 +16,9 @@ import MyRecommindations from "../MyRecommendations/MyRecommindations";
 import Recommendations from "../Recommendations/Recommendations";
 import MyFeature from "../MyFeature/MyFeature";
 import Cardpage from "../CardPage/Cardpage";
-import CheckOut from "../Checkout/CheckOut";
+
+import PaymentsMoney from "../Payment/Payment";
+import PaymentSuccess from "../PaymentSuccess/PaymentSuccess";
 
 const router = createBrowserRouter([
   {
@@ -72,7 +74,7 @@ const router = createBrowserRouter([
         path: "/checkOut",
         element: (
           <PrivateRouter>
-            <CheckOut></CheckOut>
+            <PaymentsMoney></PaymentsMoney>
           </PrivateRouter>
         ),
       },
@@ -87,7 +89,7 @@ const router = createBrowserRouter([
       {
         path: "/queryDetails/:id",
         loader: ({ params }) =>
-          axios.get(`https://crud-server-alternative-product.vercel.app/findData/${params.id}`, {
+          axios.get(`https://ruhitproductserver.vercel.app/findData/${params.id}`, {
             withCredentials: true,
           }),
         element: (
@@ -99,7 +101,7 @@ const router = createBrowserRouter([
       {
         path: "/queryUpdate/:id",
         loader: ({ params }) =>
-          axios.get(`https://crud-server-alternative-product.vercel.app/findData/${params.id}`, {
+          axios.get(`https://ruhitproductserver.vercel.app/findData/${params.id}`, {
             withCredentials: true,
           }),
         element: (
@@ -124,6 +126,12 @@ const router = createBrowserRouter([
           </PrivateRouter>
         ),
       },
+      {
+        path : "/paymentSuccess",
+        element : <PrivateRouter>
+          <PaymentSuccess></PaymentSuccess>
+        </PrivateRouter>
+      }
     ],
   },
 ]);

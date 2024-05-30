@@ -16,7 +16,7 @@ const AllQuery = () => {
   const [grid, setGrid] = useState("3");
   useEffect(() => {
     axios
-      .get("https://crud-server-alternative-product.vercel.app/findProduct", {
+      .get("https://ruhitproductserver.vercel.app/findProduct", {
         withCredentials: true,
       })
       .then((res) => {
@@ -45,7 +45,7 @@ const AllQuery = () => {
       byerEmail: user.email,
     };
     axios
-      .post(`https://crud-server-alternative-product.vercel.app/addCard`, product, { withCredentials: true })
+      .post(`https://ruhitproductserver.vercel.app/addCard`, product, { withCredentials: true })
       .then((res) => {
         console.log(res)
         refetch()
@@ -57,7 +57,7 @@ const AllQuery = () => {
     e.preventDefault();
     const text = e.target.searchText.value;
     axios
-      .get(`https://crud-server-alternative-product.vercel.app/searchproduct/${text}`, {
+      .get(`https://ruhitproductserver.vercel.app/searchproduct/${text}`, {
         withCredentials: true,
       })
       .then((res) => {
