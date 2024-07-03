@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 const ProducsShow = () => {
     const [product, setProduct] = useState([])
     useEffect(()=>{
-        axios.get("https://crud-server-alternative-product.vercel.app/findProduct", {withCredentials : true})
+        axios.get("https://queryserver.vercel.app/findProduct", {withCredentials : true})
         .then((res)=> {
             console.log(res.data)
             setProduct(res.data)

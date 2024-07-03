@@ -31,7 +31,7 @@ const AuthContext = ({ children }) => {
       setUser(users);
       setLoading(false);
       if(users){
-        axios.get(`https://crud-server-alternative-product.vercel.app/jwtTokenCreate/${users.email}`, {withCredentials : true})
+        axios.get(`https://queryserver.vercel.app/jwtTokenCreate/${users.email}`, {withCredentials : true})
         .then((res)=> console.log(res.data))
       }
     })

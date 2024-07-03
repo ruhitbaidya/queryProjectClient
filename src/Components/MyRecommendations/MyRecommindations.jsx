@@ -9,7 +9,7 @@ const MyRecommindations = () => {
   console.log(user.email);
   useEffect(() => {
     axios
-      .get(`https://crud-server-alternative-product.vercel.app/mycomment/${user?.email}`, {
+      .get(`https://queryserver.vercel.app/mycomment/${user?.email}`, {
         withCredentials: true,
       })
       .then((res) => {
@@ -30,7 +30,7 @@ const MyRecommindations = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .post(`https://crud-server-alternative-product.vercel.app/deleteProduct/${id}`, ids, {withCredentials:true})
+          .post(`https://queryserver.vercel.app/deleteProduct/${id}`, ids, {withCredentials:true})
           .then((res) => {
             if (res.data.deletedCount > 0) {
               const finial = mycomment.filter((ind)=> ind._id !== id);
