@@ -60,7 +60,7 @@ const AllQuery = () => {
             </label>
           </form>
         </div>
-        <div className="flex items-center justify-center hidden lg:flex">
+        <div className="items-center justify-center hidden lg:flex">
           <button
             onClick={() => handelGridChange("1")}
             className="bg-blue-500 dark:bg-gray-100 text-white px-[30px] py-[12px] mr-[5px]"
