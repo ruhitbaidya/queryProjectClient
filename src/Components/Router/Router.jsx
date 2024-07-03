@@ -15,6 +15,10 @@ import UpdateQuery from "../UpdateQuery/UpdateQuery";
 import MyRecommindations from "../MyRecommendations/MyRecommindations";
 import Recommendations from "../Recommendations/Recommendations";
 import MyFeature from "../MyFeature/MyFeature";
+import Cardpage from "../CardPage/Cardpage";
+
+import PaymentsMoney from "../Payment/Payment";
+import PaymentSuccess from "../PaymentSuccess/PaymentSuccess";
 
 const router = createBrowserRouter([
   {
@@ -59,6 +63,22 @@ const router = createBrowserRouter([
         ),
       },
       {
+        path: "/cardPage",
+        element: (
+          <PrivateRouter>
+            <Cardpage></Cardpage>
+          </PrivateRouter>
+        ),
+      },
+      {
+        path: "/checkOut",
+        element: (
+          <PrivateRouter>
+            <PaymentsMoney></PaymentsMoney>
+          </PrivateRouter>
+        ),
+      },
+      {
         path: "/allQuery",
         element: <AllQuery></AllQuery>,
       },
@@ -69,7 +89,7 @@ const router = createBrowserRouter([
       {
         path: "/queryDetails/:id",
         loader: ({ params }) =>
-          axios.get(`https://queryserver.vercel.app/findData/${params.id}`, {
+          axios.get(`http://localhost:5000/findData/${params.id}`, {
             withCredentials: true,
           }),
         element: (
@@ -81,7 +101,7 @@ const router = createBrowserRouter([
       {
         path: "/queryUpdate/:id",
         loader: ({ params }) =>
-          axios.get(`https://queryserver.vercel.app/findData/${params.id}`, {
+          axios.get(`http://localhost:5000/findData/${params.id}`, {
             withCredentials: true,
           }),
         element: (
@@ -106,6 +126,12 @@ const router = createBrowserRouter([
           </PrivateRouter>
         ),
       },
+      {
+        path : "/paymentSuccess",
+        element : <PrivateRouter>
+          <PaymentSuccess></PaymentSuccess>
+        </PrivateRouter>
+      }
     ],
   },
 ]);
