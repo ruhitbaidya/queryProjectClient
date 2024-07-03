@@ -6,7 +6,7 @@ const SecureAxis = () => {
     const {data, refetch} = useQuery({
         queryKey : ["product"],
         queryFn : async()=>{
-            const res = await axios.get("https://queryserver.vercel.app/productGetCard", {withCredentials: true})
+            const res = await axios.get("https://query-project-server.vercel.app/productGetCard", {withCredentials: true})
             return res
         }
     })

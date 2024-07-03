@@ -7,7 +7,7 @@ const Recommendations = () => {
   const [mycomment, setMyComment] = useState([]);
   const {user} = useContext(AuthUserContext)
   useEffect(()=>{
-      axios.get(`https://queryserver.vercel.app/getOtherComment/${user.email}`, {withCredentials:true})
+      axios.get(`https://query-project-server.vercel.app/getOtherComment/${user.email}`, {withCredentials:true})
       .then((res)=>{
         setMyComment(res.data)
       })

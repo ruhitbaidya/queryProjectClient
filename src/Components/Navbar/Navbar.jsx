@@ -16,7 +16,7 @@ function Navbar() {
 
   const handelLogout = () => {
     axios
-      .get(`https://queryserver.vercel.app/logutUser`, { withCredentials: true })
+      .get(`https://query-project-server.vercel.app/logutUser`, { withCredentials: true })
       .then((res) => {
         console.log(res);
         location.reload();

@@ -17,7 +17,7 @@ const AddQueryPage = () => {
         const userinfotime = {userEmail : user.email, cName : user.displayName, Uphoto : user.photoURL, recommendationCount : 0, currentTime : DateAtime()}
         const infos = {productName, productBrand, productImageurl, queryTItle, boycottingDetails, userinfotime, createAt}
 
-        axios.post("https://queryserver.vercel.app/createProductAlternative", infos, {withCredentials : true})
+        axios.post("https://query-project-server.vercel.app/createProductAlternative", infos, {withCredentials : true})
         .then((res)=> {
             if(res.data.insertedId){
                 toast.success("successfully Create Product")

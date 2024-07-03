@@ -14,7 +14,7 @@ const Cardpage = () => {
     setMoney(totalPrice)
   }, [setMoney, totalPrice])
   const handeCardDelete = (id)=>{
-    axios.delete(`https://queryserver.vercel.app/deleteCardProduct/${id}`,{withCredentials : true})
+    axios.delete(`https://query-project-server.vercel.app/deleteCardProduct/${id}`,{withCredentials : true})
     .then((res)=> {
         console.log(res)
         if(res.data.deletedCount > 0){
