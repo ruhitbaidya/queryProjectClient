@@ -32,7 +32,7 @@ const AuthContext = ({ children }) => {
       setUser(users);
       setLoading(false);
       if(users){
-        axios.get(`http://localhost:5000/jwtTokenCreate/${users.email}`, {withCredentials : true})
+        axios.get(`https://queryserver.vercel.app/jwtTokenCreate/${users.email}`, {withCredentials : true})
         .then((res)=> console.log(res.data))
       }
     })

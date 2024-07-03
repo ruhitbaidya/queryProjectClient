@@ -12,7 +12,7 @@ const PaymentsMoney = () => {
   const [clientSecret, setClientSecret] = useState("");
   console.log(money)
   useEffect(()=>{
-      fetch("http://localhost:5000/payment-create", {
+      fetch("https://queryserver.vercel.app/payment-create", {
         method : "POST",
         headers : {
           "content-type" : "application/json"

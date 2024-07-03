@@ -2,7 +2,7 @@
 
 **Website Name:** Prod Genius
 
-**Live Site URL:** [Prod Genius](http://localhost:5000)
+**Live Site URL:** [Prod Genius](https://queryserver.vercel.app)
 
 ---
 

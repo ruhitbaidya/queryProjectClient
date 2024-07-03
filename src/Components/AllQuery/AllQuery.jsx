@@ -14,7 +14,7 @@ const AllQuery = () => {
   const [grid, setGrid] = useState("3");
   useEffect(() => {
     axios
-      .get("http://localhost:5000/findProduct", { withCredentials: true })
+      .get("https://queryserver.vercel.app/findProduct", { withCredentials: true })
       .then((res) => {
         const finddata = res.data.sort((a, b) => b.createAt - a.createAt);
         setProduct(finddata);
@@ -36,7 +36,7 @@ const AllQuery = () => {
       e.preventDefault();
       const text = e.target.searchText.value;
       axios
-      .get(`http://localhost:5000/searchproduct/${text}`, { withCredentials: true })
+      .get(`https://queryserver.vercel.app/searchproduct/${text}`, { withCredentials: true })
       .then((res) => {
         console.log(res.data);
         setProduct(res.data);
