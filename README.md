@@ -24,3 +24,11 @@ Join Prod Genius  seems like it could be a platform or tool for facilitating com
 
 --- 
 
+technology
+
+    Front end : React.js
+    Back end : express.js
+    Database : MongoDB
+    Authentication: Firebase, jwt
+
+
